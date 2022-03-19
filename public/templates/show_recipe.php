@@ -27,9 +27,9 @@ $ranked_count = countAsWhere($pdo, 'ranked', 'ranked_count', 'comments', 'recipe
             <h2><?= $recipe['title']; ?></h2>
 
             <?php if (!empty($recipe['image'])) : ?>
-                <img src="/public/src/img/<?= $recipe['image']; ?>" alt="image qui représente">
+                <img src="/public/src/img/<?= $recipe['image']; ?>" alt="<?= $recipe['title']; ?>">
             <?php else : ?>
-                <img src="https://via.placeholder.com/350x150" alt="image qui représente">
+                <img src="https://via.placeholder.com/350x150" alt="Cette recette ne comporte pas d'image ceci est une image de remplacement">
             <?php endif; ?>
 
         </section>

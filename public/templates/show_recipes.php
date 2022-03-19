@@ -21,9 +21,9 @@ if ($_GET) {
 				<section>
 
 					<?php if (empty($recipe['image'])) : ?>
-						<img src="https://via.placeholder.com/350x350" alt="image qui représente">
+						<img src="https://via.placeholder.com/350x350" alt="Cette recette ne comporte pas d'image ceci est une image de remplacement">
 					<?php else : ?>
-						<img src="/public/src/img/<?= $recipe['image']; ?>" alt="image qui représente">
+						<img src="/public/src/img/<?= $recipe['image']; ?>" alt="<?= $recipe['title'] ;?>">
 					<?php endif; ?>
 
 				</section>

@@ -28,9 +28,9 @@ if (empty($author_recipe)) {
     <p><?= $recipe['date_recipe']; ?></p>
 
     <?php if (!empty($recipe['image'])) : ?>
-        <img src="/public/src/img/<?= $recipe['image']; ?>" alt="image qui représente">
+        <img src="/public/src/img/<?= $recipe['image']; ?>" alt="Cette recette ne comporte pas d'image ceci est une image de remplacement">
     <?php else : ?>
-        <img src="https://via.placeholder.com/350x150" alt="image qui représente">
+        <img src="https://via.placeholder.com/350x150" alt="<?=$recipe['title'];?>">
     <?php endif; ?>
 
     <br>

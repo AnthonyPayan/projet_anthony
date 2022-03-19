@@ -46,13 +46,13 @@ if (isset($_SESSION['role'])) {
 
     <section class="form-section">
         <label class="label_title">Titre de votre recette</label>
-        <input type="text" name="title" class="form_textarea_title" rows="1" placeholder="Titre de votre recette"></input>
+        <input type="text" name="title" class="form_textarea_title" rows="1" placeholder="Titre de votre recette">
     </section>
 
 
     <section class="form-section">
         <label class="label_description">Etape de réalisation de votre recette</label>
-        <input name="description" class="form_textarea_description" placeholder="Etape de réalisation de votre recette"></input>
+        <input name="description" class="form_textarea_description" placeholder="Etape de réalisation de votre recette">
     </section>
 
 

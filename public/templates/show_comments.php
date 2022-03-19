@@ -22,9 +22,9 @@ if (isset($_GET)) : ?>
 					<h2><?= $recipes['title']; ?></h2>
 
 					<?php if (empty($recipes['image'])) : ?>
-						<img src="https://via.placeholder.com/350x150" class="card-img-top" alt="image qui représente">
+						<img src="https://via.placeholder.com/350x150" class="card-img-top" alt="Cette recette ne comporte pas d'image ceci est une image de remplacement">
 					<?php else : ?>
-						<img src="../src/img/<?= $recipes['image']; ?>" class="card-img-top" alt="image qui représente">
+						<img src="../src/img/<?= $recipes['image']; ?>" class="card-img-top" alt="<?=$recipe['title'];?>">
 					<?php endif; ?>
 
 				</section>
