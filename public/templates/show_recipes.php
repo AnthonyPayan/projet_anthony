@@ -17,13 +17,13 @@ if ($_GET) {
 		$ranked_count = countAsWhere($pdo, 'ranked', 'ranked_count', 'comments', 'recipe_id', $recipe_id); ?>
 
 		<article class="container-article-show_recipes shadow effect-up">
-			<a class="content-article" href="show_recipe.php?recipe_id=<?= $recipe_id; ?>">
+			<a title="Afficher la recette" class="content-article" href="show_recipe.php?recipe_id=<?= $recipe_id; ?>">
 				<section>
 
 					<?php if (empty($recipe['image'])) : ?>
 						<img src="https://via.placeholder.com/350x350" alt="Cette recette ne comporte pas d'image ceci est une image de remplacement">
 					<?php else : ?>
-						<img src="/public/src/img/<?= $recipe['image']; ?>" alt="<?= $recipe['title'] ;?>">
+						<img src="/public/src/img/<?= $recipe['image']; ?>" alt="<?= $recipe['title']; ?>">
 					<?php endif; ?>
 
 				</section>

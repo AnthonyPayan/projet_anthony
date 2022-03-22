@@ -37,7 +37,7 @@ $ranked_count = countAsWhere($pdo, 'ranked', 'ranked_count', 'comments', 'recipe
             <p class="p-detail">Posté par <?= $user['nickname']; ?></p>
             <p class="p-detail">Le <?= $date_recipe; ?></p>
             <p class="p-detail">Catégorie
-                <a href="show_recipes.php?category_id=<?= $recipe_category; ?>">
+                <a title="Voir les recettes de la catégorie <?= $category['name']; ?>" href="show_recipes.php?category_id=<?= $recipe_category; ?>">
                     <?= $category['name']; ?>
                 </a>
             </p>
@@ -49,7 +49,7 @@ $ranked_count = countAsWhere($pdo, 'ranked', 'ranked_count', 'comments', 'recipe
 
             <?php if ($ranked_count['ranked_count'] > 0) : ?>
 
-                <a href="show_comments.php?recipe_id=<?= $recipe_id; ?>"><span>sur <?= $ranked_count['ranked_count']; ?> avis</span></a>
+                <a title="Voir les avis pour cette recette" href="show_comments.php?recipe_id=<?= $recipe_id; ?>"><span>sur <?= $ranked_count['ranked_count']; ?> avis</span></a>
 
             <?php else : ?>
                 <span><?= $ranked_count['ranked_count']; ?><i class="far fa-comment"></i></span>

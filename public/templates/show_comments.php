@@ -24,7 +24,7 @@ if (isset($_GET)) : ?>
 					<?php if (empty($recipes['image'])) : ?>
 						<img src="https://via.placeholder.com/350x150" class="card-img-top" alt="Cette recette ne comporte pas d'image ceci est une image de remplacement">
 					<?php else : ?>
-						<img src="../src/img/<?= $recipes['image']; ?>" class="card-img-top" alt="<?=$recipe['title'];?>">
+						<img src="../src/img/<?= $recipes['image']; ?>" class="card-img-top" alt="<?= $recipes['title']; ?>">
 					<?php endif; ?>
 
 				</section>
@@ -32,7 +32,7 @@ if (isset($_GET)) : ?>
 					<p class="p-detail">Posté par <?= $recipes['nickname']; ?></p>
 					<p class="p-detail">Le <?= $date_recipe; ?></p>
 					<p class="p-detail">Catégorie
-						<a href="show_recipes.php?category_id=<?= $recipes['category_id']; ?>">
+						<a title="Voir les recette de la catégorie <?= $recipes['name']; ?>" href="show_recipes.php?category_id=<?= $recipes['category_id']; ?>">
 							<?= $recipes['name']; ?>
 						</a>
 					</p>
@@ -42,7 +42,7 @@ if (isset($_GET)) : ?>
 
 					<?php ranking($count['average']); ?>
 
-					<a href="#section-comments_link">
+					<a title="Voir les avis pour cette recette" href="#section-comments_link">
 
 						<?php if ($ranked_count['ranked_count'] >= 1) : ?>
 							<span>sur <?= $ranked_count['ranked_count']; ?> avis</span>

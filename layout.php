@@ -29,15 +29,15 @@ if ($_SESSION) {
 <body>
 	<header>
 		<nav>
-			<a href="/index.php"><i class="fas fa-home"></i><span>Accueil</span></a>
+			<a title="Retour accueil du site" href="/index.php"><i class="fas fa-home"></i><span>Accueil</span></a>
 
 			<?php if ($_SESSION) : ?>
-				<a href="/public/templates/add_recipe.php">
+				<a title="Ajout d'une recette" href="/public/templates/add_recipe.php">
 					<i class="fas fa-plus"></i><span>Recette</span>
 				</a>
 			<?php endif; ?>
 
-			<a href="/public/templates/categories.php">
+			<a title="Liste des recettes" href="/public/templates/categories.php">
 				<i class="fas fa-book"></i><span>Recettes</span>
 			</a>
 

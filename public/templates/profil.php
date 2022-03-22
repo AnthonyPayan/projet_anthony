@@ -18,7 +18,7 @@ $sum = countAsWhere($pdo, 'id', 'recipe_count', 'recipes', 'user_id', $user['id'
 
 <section class="profil-head">
 
-    <a class="zoom" href="/">Retour</a>
+    <a title="Retour à l'accueil du site" class="zoom" href="/">Retour</a>
 
     <?php if ($_SESSION) : ?>
         <?php

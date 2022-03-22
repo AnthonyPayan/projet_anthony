@@ -18,14 +18,14 @@ if (!empty($recipes)) : ?>
 			<?php $count = roundAvgFetch($pdo, 'ranked', 'average', 'comments', 'recipe_id', $recipe_id); ?>
 			<?php $ranked_count = countAsWhere($pdo, 'ranked', 'ranked_count', 'comments', 'recipe_id', $recipe_id); ?>
 			<article class="shadow effect-up">
-				<a href="public/templates/show_recipe.php?recipe_id=<?= $recipe_id; ?>&category_id=<?= $category_id; ?>">
+				<a title="Afficher la recette" href="public/templates/show_recipe.php?recipe_id=<?= $recipe_id; ?>&category_id=<?= $category_id; ?>">
 					<h4><?= substr($recipe['title'], 0, 20); ?></h4>
 					<h5> de <?= $recipe['nickname']; ?></h5>
 					<section class="relative">
 						<?php if (empty($recipe['image'])) : ?>
 							<img src="https://via.placeholder.com/350x350" alt="Cette recette ne comporte pas d'image ceci est une image de remplacement">
 						<?php else : ?>
-							<img src="/public/src/img/<?= $recipe['image']; ?>" alt="<?=$recipe['title'];?>">
+							<img src="/public/src/img/<?= $recipe['image']; ?>" alt="<?= $recipe['title']; ?>">
 						<?php endif; ?>
 						<p class="avatar"><?= $avatar[$recipe['avatar']]; ?></p>
 					</section>
