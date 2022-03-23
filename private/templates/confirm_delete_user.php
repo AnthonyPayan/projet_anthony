@@ -35,12 +35,11 @@ $date_profil = showDate($user_info['registration_at']); ?>
     <?php $nb_comment = countAsWhere($pdo, 'user_id', 'nb_comment', 'comments', 'user_id', $user_id); ?>
     <p class="text-info">Nombre de commentaire : <?= $nb_comment['nb_comment']; ?></p>
 
-    <div class="alert alert-danger">
+    <div class="alert alert-danger " style="max-width: 20rem;">
         <strong>Ête-vous sur de vouloir supprimer le profil de <?= $user_info['nickname']; ?> ?</strong>
-        <br>
-        <br>
+
         <p>Ce choix est irréversible il entraine la suppréssion du profil, des recettes qui y sont liées, et aussi les commentaires.</p>
-        <br>
+
         <a href="../controller/DeleteUser.php?user_id=<?= $user_id; ?>" class="alert-link">Je souhaite supprimer ce profile.</a>
     </div>
 

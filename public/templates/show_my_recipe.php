@@ -16,7 +16,7 @@ if ($recipe['user_id'] !== $_SESSION['id']) {
 }
 if (empty($recipe)) {
     echo "Pas de recette à afficher";
-    echo "<a href=\"categories.php\">Retour à l'affichage des recettes</a><br>";
+    echo "<a href=\"categories.php\">Retour à l'affichage des recettes</a>";
     exit();
 }
 
@@ -36,7 +36,7 @@ $date_recipe = showDate($recipe['date_recipe']);
             <?php if (!empty($recipe['image'])) : ?>
                 <img src="/public/src/img/<?= $recipe['image']; ?>" alt="Cette recette ne comporte pas d'image ceci est une image de remplacement">
             <?php else : ?>
-                <img src="https://via.placeholder.com/350x150" alt="<?= $recipe['title'] ;?>">
+                <img src="https://via.placeholder.com/350x150" alt="<?= $recipe['title']; ?>">
             <?php endif; ?>
 
         </section>

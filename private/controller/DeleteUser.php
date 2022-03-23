@@ -1,6 +1,7 @@
 <?php
-require('../../libraries/services/functions.php');
+require('../../admin_layout.php');
 $pdo = getPdo();
+
 
 if (isset($_GET['user_id']) && $_SESSION['role'] == ADMIN) {
     $id = $_GET['user_id'];
