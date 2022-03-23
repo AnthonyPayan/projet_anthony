@@ -98,14 +98,14 @@ if (isset($_GET)) : ?>
 				<form method="POST" action="../controller/AddComment.php" id="add_comment_link">
 
 					<section class="form-section">
-						<label>Votre commentaire...</label>
+						<label for="comment">Votre commentaire...</label>
 						<div class="form-floating mb-3">
-							<input name="comment" type="text" class="form-control" id="floatingInput" placeholder="J'adore cette recette...">
+							<input name="comment" type="text" class="form-control" id="comment" placeholder="J'adore cette recette...">
 					</section>
 
 					<section class="form-section">
-						<label for="exampleSelect1">Attribuer une note sur 5</label>
-						<select name="ranked" class="form-select" id="exampleSelect1">
+						<label for="ranked">Attribuer une note sur 5</label>
+						<select name="ranked" class="form-select" id="ranked">
 							<option>1</option>
 							<option>2</option>
 							<option>3</option>

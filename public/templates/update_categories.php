@@ -22,8 +22,8 @@ if ($_SESSION) {
             <input id="user_id" name="recipe_id" type="hidden" value="<?= $recipe_info['id']; ?>">
 
 
-            <label for="categoryChoice">Choix de la catégorie</label>
-            <select name="category_id" class="form-control" id="categoryChoice">
+            <label for="category_id">Choix de la catégorie</label>
+            <select name="category_id" class="form-control" id="category_id">
 
                 <?php foreach ($categories as $category) : ?>
 

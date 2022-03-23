@@ -12,16 +12,16 @@ if (!empty($_GET['id'])) {
 	echo
 	"<form method=\"POST\" action=\"\">
 			<section class=\"form-section\">
-				<label for=\"exampleInputEmail1\" >Nouveau mot de passe</label>
-				<input name=\"new_password\" type=\"password\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\">
+				<label for=\"new_password\" >Nouveau mot de passe</label>
+				<input name=\"new_password\" type=\"password\" class=\"form-control\" id=\"new_password\" aria-describedby=\"emailHelp\">
 			</section>
 			<section class=\"form-section\">
-				<label for=\"exampleInputPassword1\" >Confirmation du nouveau mot de passe</label>
-				<input name=\"password_confirm\" type=\"password\" class=\"form-control\" id=\"exampleInputPassword1\">
+				<label for=\"password_confirm\" >Confirmation du nouveau mot de passe</label>
+				<input name=\"password_confirm\" type=\"password\" class=\"form-control\" id=\"password_confirm\">
 				</section>
 			<section class=\"form-section\">
-				<label for=\"exampleInputPassword1\" >Ancien mot de passe</label>
-				<input name=\"old_password\" type=\"password\" class=\"form-control\" id=\"exampleInputPassword1\">
+				<label for=\"old_password\" >Ancien mot de passe</label>
+				<input name=\"old_password\" type=\"password\" class=\"form-control\" id=\"old_password\">
 				</section>
 			<section class=\"form-section\">
 				<button type=\"submit\" class=\"btn btn-success\">Envoyé</button>

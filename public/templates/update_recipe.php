@@ -14,8 +14,8 @@ if ($_GET) : ?>
         <input id="user_id" name="recipe_id" type="hidden" value="<?= $recipe_id; ?>">
 
         <section class="form-section">
-            <label for="categoryChoice">Choix de la catégorie</label>
-            <select name="category" class="form-control" id="categoryChoice">
+            <label for="category">Choix de la catégorie</label>
+            <select name="category" class="form-control" id="category">
 
                 <?php foreach ($categories as $category) : ?>
 
@@ -38,8 +38,8 @@ if ($_GET) : ?>
         </section>
 
         <section class="form-section">
-            <label for="exampleFormControlTextarea1">Etape de réalisation de votre recette</label>
-            <textarea name="description" class="form-control" id="exampleFormControlTextarea1"><?= $recipe['description']; ?></textarea>
+            <label for="description">Etape de réalisation de votre recette</label>
+            <textarea name="description" class="form-control" id="description"><?= $recipe['description']; ?></textarea>
         </section>
 
         <section class="form-section">

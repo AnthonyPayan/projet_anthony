@@ -14,10 +14,10 @@ $recipes = selectAll($pdo, 'recipes');; ?>
     <form method="POST" action="../controller/AddCategory.php">
 
         <div class="form-group">
-            <label class="form-label mt-4">Nom de la catégorie à ajouter</label>
+            <p>Nom de la catégorie à ajouter</p>
             <div class="form-floating mb-3">
-                <input name="category_name" type="text" class="form-control" id="floatingInput" placeholder="Nom de la catégorie">
-                <label for="floatingInput">Potage... Salade... Etc...</label>
+                <input name="category_name" type="text" class="form-control" id="category_name" placeholder="Nom de la catégorie">
+                <label for="category_name">Potage... Salade... Etc...</label>
             </div>
             <button type="submit" class="btn btn-success">Ajouter !</button>
     </form>

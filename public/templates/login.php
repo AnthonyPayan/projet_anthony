@@ -5,13 +5,13 @@ include('../../layout.php');
 <form method="POST" action="../controller/Login.php">
 
 	<section class="form-section">
-		<label for="nickname-input">Pseudonyme</label>
-		<input id="nickname-input" name="nickname" type="text">
+		<label for="nickname">Pseudonyme</label>
+		<input id="nickname" name="nickname" type="text">
 	</section>
 
 	<section class="form-section">
-		<label for="password-input">Mot de passe</label>
-		<input id="password-input" name="password" type="password">
+		<label for="password">Mot de passe</label>
+		<input id="password" name="password" type="password">
 	</section>
 
 	<section class="form-section">

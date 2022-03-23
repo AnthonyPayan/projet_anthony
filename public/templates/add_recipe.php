@@ -16,8 +16,8 @@ if (isset($_SESSION['role'])) {
 
 
     <section class="form-section">
-        <label for="categoryChoice">Choix de la catégorie</label>
-        <select name="category" class="form-control" id="categoryChoice">
+        <label for="category">Choix de la catégorie</label>
+        <select name="category" class="form-control" id="category">
             <?php $only_one_category = countOneTable($pdo, 'id', 'count_category', 'categories');
             if ($only_one_category['count_category'] > 1) {
                 foreach ($categories as $category) {
@@ -45,20 +45,20 @@ if (isset($_SESSION['role'])) {
     <?php endif; ?>
 
     <section class="form-section">
-        <label class="label_title">Titre de votre recette</label>
+        <label for="title" class="label_title">Titre de votre recette</label>
         <input type="text" name="title" class="form_textarea_title" rows="1" placeholder="Titre de votre recette">
     </section>
 
 
     <section class="form-section">
-        <label class="label_description">Etape de réalisation de votre recette</label>
+        <label flor="description" class="label_description">Etape de réalisation de votre recette</label>
         <input name="description" class="form_textarea_description" placeholder="Etape de réalisation de votre recette">
     </section>
 
 
     <section class="form-section">
-        <label for="formFile" class="form-label zoom"><i class="fas fa-paperclip"></i><span>Ajouter une image</span></label>
-        <input class="file_input" type="file" id="formFile" name="image">
+        <label for="image" class="form-label zoom"><i class="fas fa-paperclip"></i><span>Ajouter une image</span></label>
+        <input class="file_input" type="file" id="image" name="image">
     </section>
 
 
