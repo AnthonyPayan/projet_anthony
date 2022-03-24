@@ -15,7 +15,7 @@ include('../controller/ShowMyCategories.php');
 
 <section <?= $classCategory; ?>>
     <?php foreach ($recipeNumber as $categoryId => $category) : ?>
-        <a class="btn-number btn" href="/public/templates/show_recipes.php?category_id=<?= $categoryId; ?>">
+        <a class="btn-number btn" href="/public/templates/show_my_recipes.php?category_id=<?= $categoryId; ?>">
             <span class="span-name"><?= $category['name']; ?></span>
             <span class="span-number"><?= $category['number']; ?></span>
         </a>

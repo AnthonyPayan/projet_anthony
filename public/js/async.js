@@ -1,7 +1,7 @@
 
 
-async function loadContent() { 
-    var content = await fetch('async/file_download'); 
+async function loadContent() {
+    var content = await fetch('async/file_download');
     content = await content.text();
     document.querySelector('.async_form').innerHTML = content;
 }
