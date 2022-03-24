@@ -7,9 +7,7 @@ include('../controller/ShowMyRecipe.php');
 <section class="section-show-recipe">
     <article class="article-show-recipe">
         <section class="show-recipe-section-img">
-
             <img src="<?= $srcImg; ?>" alt="<?= $altImg; ?>">
-
         </section>
         <section class="show-recipe-detail">
             <h4><?= $recipe['title']; ?></h4>
