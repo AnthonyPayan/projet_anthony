@@ -1,7 +1,7 @@
 <?php
 
-const ATTENTE = 1;
-
+const ATTENTE = 16;
+//const ATTENTE a changé a 1 pour diplome.
 
 const ADMIN = 1;
 
