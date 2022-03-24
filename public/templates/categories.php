@@ -9,7 +9,6 @@ include('../controller/ShowCategories.php'); ?>
 </section>
 
 <!-- Affichage des catégories ou des liens-->
-<!-- class="categories_choice" -->
 <section <?= $classCategory; ?>>
 
     <?php foreach ($recipeNumber as $categoryId => $category) : ?>
