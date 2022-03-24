@@ -1,11 +1,10 @@
 <?php
-include('../../layout.php');
 
+include('../../layout.php');
 
 if (!isset($_SESSION['role'])) {
     header("location: error.php?error=3");
 }
-
 
 if (!isset($_GET['recipe_id'])) {
     header("location: error.php?error=2");
@@ -14,10 +13,10 @@ if (!isset($_GET['recipe_id'])) {
     $recipe_check = selectOneByFetch($pdo, 'id', 'recipes', 'id', $recipe_id);
 }
 
-
 if ($recipe_check == false) {
     header("location: error.php?error=1");
-} ?>
+}
+?>
 
 
 <form method="POST" action="../controller/AddComment.php">
