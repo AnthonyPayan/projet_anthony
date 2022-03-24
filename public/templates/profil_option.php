@@ -24,7 +24,7 @@ $timestamp = strtotime($user['registration_at']); ?>
 
 <section class="profil-section">
     <section class="link">
-        <a href="change_password.php?id=<?= $user["id"]; ?>">Changer de mot de passe</a>
+        <a href="change_password.php?user_id=<?= $user["id"]; ?>">Changer de mot de passe</a>
 
         <?php if ($_SESSION['role'] != ADMIN) : ?>
             <a class="danger user-delete" href="delete_user_confirm.php?user_id=<?= $user["id"]; ?>">Supprimer mon compte</a>
