@@ -1,7 +1,5 @@
 <?php
-
 include('../../layout.php');
-
 
 if ($_SESSION) {
     $user_id = $_SESSION['id'];

@@ -59,3 +59,21 @@ function ranking($rank)
         }
     }
 }
+
+function rankingStack($rank)
+{
+
+    if ($rank == null) {
+        $rank = 0;
+    }
+
+    for ($i = 0; $i <= 4; $i++) {
+
+        if ($rank > $i) {
+            $array[$i] = '<i class="fas fa-star fastar"></i>';
+        } else {
+            $array[$i] = '<i class="far fa-star farstar"></i>';
+        }
+    }
+    return $array;
+}

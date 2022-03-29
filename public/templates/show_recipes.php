@@ -1,43 +1,30 @@
 <?php
 include('../../layout.php');
+include('../controller/ShowRecipes.php');
+?>
 
-if ($_GET) {
-	$category_id = $_GET['category_id'];
-	$recipes = selectAllBy($pdo, 'recipes', 'category_id', $category_id);
-	$category = selectOneBy($pdo, 'categories', 'id', $category_id);
-} ?>
 <section class="first-container flex-wrap">
 
-	<?php foreach ($recipes as $recipe) : ?>
-		<?php $recipe_id = $recipe['id']; ?>
-		<?php $recipe_user_id = $recipe['user_id']; ?>
-		<?php $user = selectTwoByFetch($pdo, 'nickname', 'avatar', 'users', 'id', $recipe_user_id); ?>
-		<?php $recipe_date = showDate($recipe['date_recipe']);
-		$count = roundAvgFetch($pdo, 'ranked', 'average', 'comments', 'recipe_id', $recipe_id);
-		$ranked_count = countAsWhere($pdo, 'ranked', 'ranked_count', 'comments', 'recipe_id', $recipe_id); ?>
+	<?php foreach ($datas as $data) : ?>
 
 		<article class="container-article-show_recipes shadow effect-up">
 			<a title="Afficher la recette" class="content-article" href="show_recipe.php?recipe_id=<?= $recipe_id; ?>">
 				<section>
-
-					<?php if (empty($recipe['image'])) : ?>
-						<img src="https://via.placeholder.com/350x350" alt="Cette recette ne comporte pas d'image ceci est une image de remplacement">
-					<?php else : ?>
-						<img src="/public/src/img/<?= $recipe['image']; ?>" alt="<?= $recipe['title']; ?>">
-					<?php endif; ?>
-
+					<img src="<?= $data['srcImg']; ?>" alt="<?= $data['altImg']; ?>">
 				</section>
 				<section>
-					<h2><?= $recipe['title']; ?></h2>
-					<p class="p-detail">Posté par <?= $user['nickname']; ?></p>
-					<p class="p-detail">Le <?= $recipe_date; ?></p>
-					<p class="p-detail">Catégorie <?= $category['name']; ?></p>
+					<h2><?= $data['recipe_title']; ?></h2>
+					<p class="p-detail">Posté par <?= $data['autor']; ?></p>
+					<p class="p-detail">Le <?= $data['date']; ?></p>
+					<p class="p-detail">Catégorie <?= $data['category']; ?></p>
 				</section>
 				<section class="show-recipe-ranked">
-					<?php ranking($count['average']); ?>
-					<span><?= $ranked_count['ranked_count']; ?><i class="far fa-comment"></i></span>
+					<?php ranking($data['rank']); ?>
+					<span><?= $data['ranked_count']; ?><i class="far fa-comment"></i></span>
 				</section>
 			</a>
 		</article>
+
 	<?php endforeach; ?>
+
 </section>
