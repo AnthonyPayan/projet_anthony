@@ -19,7 +19,7 @@ $user = selectOneBy($pdo, 'users', 'id', $recipe['user_id']);
 $ranked_count = countAsWhere($pdo, 'ranked', 'ranked_count', 'comments', 'recipe_id', $recipe_id);
 $count = roundAvgFetch($pdo, 'ranked', 'average', 'comments', 'recipe_id', $recipe_id);
 $date_recipe = showDate($recipe['date_recipe']);
-// ranking($count['average']);
+
 
 //définition src img
 if (!empty($recipe['image'])) {

@@ -14,7 +14,7 @@ include('../controller/ShowRecipes.php');
 				</section>
 				<section>
 					<h2><?= $data['recipe_title']; ?></h2>
-					<p class="p-detail">Posté par <?= $data['autor']; ?></p>
+					<p class="p-detail">Posté par <?= $data['author']; ?></p>
 					<p class="p-detail">Le <?= $data['date']; ?></p>
 					<p class="p-detail">Catégorie <?= $data['category']; ?></p>
 				</section>

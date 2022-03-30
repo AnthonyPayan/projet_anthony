@@ -32,7 +32,7 @@ foreach ($recipes as $recipe) {
     //Infos pour l'affichage
     $datas[$recipe['id']] = [
         "recipe_title" => $recipe['title'],
-        "autor" => $autor,
+        "author" => $autor,
         "date" => $recipe_date,
         "category" => $category['name'],
         "rank" => $count['average'],

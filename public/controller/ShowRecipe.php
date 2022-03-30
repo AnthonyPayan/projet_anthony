@@ -22,12 +22,9 @@ $ranked_count = countAsWhere($pdo, 'ranked', 'ranked_count', 'comments', 'recipe
 
 //Traitement SRC de l'image et ALT
 if (!empty($recipe['image'])) {
-   $srcImg = '/public/src/img/'.$recipe['image'].'';
-   $altImg = $recipe['title'];
-
-}else {
-   $srcImg = "https://via.placeholder.com/350x150";
-   $altImg = "Cette recette ne comporte pas d'image ceci est une image de remplacement";
+    $srcImg = '/public/src/img/' . $recipe['image'] . '';
+    $altImg = $recipe['title'];
+} else {
+    $srcImg = "https://via.placeholder.com/350x350";
+    $altImg = "Cette recette ne comporte pas d'image ceci est une image de remplacement";
 }
-
-?>
