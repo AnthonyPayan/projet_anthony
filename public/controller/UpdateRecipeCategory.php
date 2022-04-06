@@ -21,7 +21,7 @@ if (!empty($_POST['recipe_id'])) {
     $recipe_info = $query->fetchAll();
 
     if (!empty($recipe_info)) {
-        header("location: ../templates/update_categories.php");
+        header("location: ../controller/PreUpdateRecipeCategory.php");
     } else {
         header("location: /index.php");
     }

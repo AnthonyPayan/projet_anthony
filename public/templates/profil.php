@@ -10,7 +10,7 @@
 <?php if (!empty($recipe_info['recipes_wait'])) : ?>
     <section class="container-info">
         <p>Une de vos recettes se trouve dans la catégorie "Attente"</p>
-        <a href="/public/templates/update_categories.php" class="btn">Modifier catégories.</a>
+        <a href="/public/controller/PreUpdateRecipeCategory.php" class="btn">Modifier catégories.</a>
     </section>
 <?php endif; ?>
 
