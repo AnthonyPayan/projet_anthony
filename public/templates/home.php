@@ -7,7 +7,7 @@ if (!empty($datas)) : ?>
         <?php foreach ($datas as $data) : ?>
 
             <article class="shadow effect-up">
-                <a title="Afficher la recette" href="public/templates/show_recipe.php?recipe_id=<?= $data['recipe_id']; ?>&category_id=<?= $data['category_id']; ?>">
+                <a title="Afficher la recette" href="public/controller/ShowRecipe.php?recipe_id=<?= $data['recipe_id']; ?>&category_id=<?= $data['category_id']; ?>">
                     <h4><?= $data['recipe_title']; ?></h4>
                     <h5> de <?= $data['author']; ?></h5>
                     <section class="relative">

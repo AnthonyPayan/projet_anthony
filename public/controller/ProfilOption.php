@@ -1,4 +1,6 @@
 <?php
+require("../../libraries/services/functions.php");
+session_start();
 
 if (!isset($_SESSION['role'])) {
     header("location: error.php?error=3");
@@ -12,3 +14,7 @@ if (!isset($_SESSION['role'])) {
 
 $user = selectOneBy($pdo, 'users', 'id', $_GET['user_id']);
 $timestamp = strtotime($user['registration_at']);
+
+
+$template = "../templates/profil_option.php";
+include("../../profil_layout.php");

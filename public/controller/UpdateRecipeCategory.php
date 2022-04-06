@@ -1,6 +1,6 @@
 <?php
 require('../../libraries/services/functions.php');
-$pdo = getPdo();
+
 
 if (!empty($_POST['recipe_id'])) {
 

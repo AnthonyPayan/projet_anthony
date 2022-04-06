@@ -1,4 +1,7 @@
 <?php
+require("../../libraries/services/functions.php");
+
+
 if ($_GET['recipe_id'] == FALSE || !isset($_GET)) {
     header("location: ../../public/templates/error.php?error=2");
 } else {
@@ -9,3 +12,5 @@ if ($_GET['recipe_id'] == FALSE || !isset($_GET)) {
     $date_recipe = showDate($recipes['date_recipe']);
     $comments = showCommentsUsers($pdo, $recipe_id);
 }
+$template = "../templates/show_comments.php";
+include("../../layout.php");

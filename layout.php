@@ -1,14 +1,6 @@
 <?php
-session_start();
-require('libraries/services/functions.php');
-$pdo = getPdo();
-
-if ($_SESSION) {
-	$session_id = $_SESSION['id'];
-	$session_name = selectOneByFetch($pdo, 'nickname', 'users', 'id', $session_id);
-	$attente = ATTENTE;
-	$recipe_info = countWaWfetch($pdo, 'id', 'recipes_wait', 'recipes', 'user_id', 'category_id', $session_id, $attente);
-} ?>
+require('public/controller/Layout.php');
+?>
 
 <!doctype html>
 <html lang="fr">
@@ -30,20 +22,20 @@ if ($_SESSION) {
 	<header>
 		<nav>
 			<a title="Retour accueil du site" href="/index.php"><i class="fas fa-home"></i><span>Accueil</span></a>
-
+			<!--TODO: Condition dans controller -->
 			<?php if ($_SESSION) : ?>
-				<a title="Ajout d'une recette" href="/public/templates/add_recipe.php">
+				<a title="Ajout d'une recette" href="/public/controller/NewRecipe.php">
 					<i class="fas fa-plus"></i><span>Recette</span>
 				</a>
 			<?php endif; ?>
 
-			<a title="Liste des recettes" href="/public/templates/categories.php">
+			<a title="Liste des recettes" href="/public/controller/ShowCategories.php">
 				<i class="fas fa-book"></i><span>Recettes</span>
 			</a>
-
+			<!--TODO: Condition dans controller -->
 			<?php if ($_SESSION) : ?>
 
-				<a href="/public/templates/profil.php?user_id=<?= $session_id; ?>">
+				<a href="/public/controller/Profil.php?user_id=<?= $session_id; ?>">
 
 					<?php if ($_SESSION) : ?>
 
@@ -59,7 +51,7 @@ if ($_SESSION) {
 					<i class="fas fa-sign-out-alt"></i>
 					<span>Déconnexion</span>
 				</a>
-
+				<!--TODO: Condition dans controller -->
 			<?php else : ?>
 				<a href="/public/templates/login.php">
 					<i class="fas fa-sign-out-alt"></i>
@@ -71,3 +63,4 @@ if ($_SESSION) {
 
 	</header>
 	<main>
+		<?php include($template); ?>

@@ -1,72 +1,61 @@
-<?php
-include('../../profil_layout.php');
+<form method="POST" action="../controller/UpdateRecipe.php" enctype="multipart/form-data">
 
-if ($_GET) : ?>
-    <?php $recipe_id = $_GET['id']; ?>
-    <?php $user_id = $_SESSION['id']; ?>
-    <?php $recipe = selectOneBy($pdo, 'recipes', 'id', $recipe_id); ?>
-    <?php $categories = selectAll($pdo, 'categories'); ?>
+    <input id="user_id" name="user_id" type="hidden" value="<?= $user_id; ?>">
+    <input id="user_id" name="recipe_id" type="hidden" value="<?= $recipe_id; ?>">
 
+    <section class="form-section">
+        <label for="category">Choix de la catégorie</label>
+        <select name="category" class="form-control" id="category">
 
-    <form method="POST" action="../controller/UpdateRecipe.php" enctype="multipart/form-data">
+            <?php foreach ($categories as $category) : ?>
 
-        <input id="user_id" name="user_id" type="hidden" value="<?= $user_id; ?>">
-        <input id="user_id" name="recipe_id" type="hidden" value="<?= $recipe_id; ?>">
-
-        <section class="form-section">
-            <label for="category">Choix de la catégorie</label>
-            <select name="category" class="form-control" id="category">
-
-                <?php foreach ($categories as $category) : ?>
-
-                    <?php if ($category['id'] == $recipe['category_id']) : ?>
-                        <option value="<?= $category['id']; ?>" selected><?= $category['name']; ?></option>
-                    <?php elseif ($category['id'] == ATTENTE) : ?>
-                        <?php continue; ?>
-                    <?php else : ?>
-                        <option value="<?= $category['id']; ?>"><?= $category['name']; ?></option>
-                    <?php endif; ?>
-
-                <?php endforeach; ?>
-
-            </select>
-        </section>
-
-        <section class="form-section">
-            <label for="title">Titre de votre recette</label>
-            <textarea name="title" class="form-control" id="title"><?= $recipe['title']; ?></textarea>
-        </section>
-
-        <section class="form-section">
-            <label for="description">Etape de réalisation de votre recette</label>
-            <textarea name="description" class="form-control" id="description"><?= $recipe['description']; ?></textarea>
-        </section>
-
-        <section class="form-section">
-            <section class="show-recipe-section-img">
-
-                <?php if (!empty($recipe['image'])) : ?>
-                    <img src="/public/src/img/<?= $recipe['image']; ?>" alt="image qui représente">
+                <?php if ($category['id'] == $recipe['category_id']) : ?>
+                    <option value="<?= $category['id']; ?>" selected><?= $category['name']; ?></option>
+                <?php elseif ($category['id'] == ATTENTE) : ?>
+                    <?php continue; ?>
                 <?php else : ?>
-                    <img src="https://via.placeholder.com/350x150" alt="image qui représente">
+                    <option value="<?= $category['id']; ?>"><?= $category['name']; ?></option>
                 <?php endif; ?>
 
-            </section>
-        </section>
+            <?php endforeach; ?>
 
-        <section class="form-section">
-            <p>Éditer cette image ?</p>
-            <button type="button" class="btn yes">Oui</button>
-            <button type="button" class="btn no">Non</button>
-        </section>
+        </select>
+    </section>
 
-        <section class="async_form">
-        </section>
+    <section class="form-section">
+        <label for="title">Titre de votre recette</label>
+        <textarea name="title" class="form-control" id="title"><?= $recipe['title']; ?></textarea>
+    </section>
 
-        <section class="form-section">
-            <button type="submit" class="btn btn-success">Envoyez !</button>
+    <section class="form-section">
+        <label for="description">Etape de réalisation de votre recette</label>
+        <textarea name="description" class="form-control" id="description"><?= $recipe['description']; ?></textarea>
+    </section>
+
+    <section class="form-section">
+        <section class="show-recipe-section-img">
+
+            <?php if (!empty($recipe['image'])) : ?>
+                <img src="/public/src/img/<?= $recipe['image']; ?>" alt="image qui représente">
+            <?php else : ?>
+                <img src="https://via.placeholder.com/350x150" alt="image qui représente">
+            <?php endif; ?>
+
         </section>
-    </form>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script src="../js/async.js"></script>
-<?php endif; ?>
+    </section>
+
+    <section class="form-section">
+        <p>Éditer cette image ?</p>
+        <button type="button" class="btn yes">Oui</button>
+        <button type="button" class="btn no">Non</button>
+    </section>
+
+    <section class="async_form">
+    </section>
+
+    <section class="form-section">
+        <button type="submit" class="btn btn-success">Envoyez !</button>
+    </section>
+</form>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="../js/async.js"></script>

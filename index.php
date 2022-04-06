@@ -1,7 +1,9 @@
 <?php
 
 //Traitement !
-include('layout.php');
+require('libraries/services/functions.php');
+$pdo = getPdo();
+
 
 //nombre de recette maximum par page.
 $max_elements = 8;
@@ -59,5 +61,6 @@ for ($i = 1; $i <= $pagination; $i++) {
 	$paginationViews[$i] = ["pagination" => $i];
 }
 
-include('home.php');
-include('layout_end.php');
+$template = "public/templates/home.php";
+include('layout.php');
+// include('layout_end.php');

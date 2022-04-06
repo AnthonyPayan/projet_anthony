@@ -1,11 +1,13 @@
 <?php
+require("../../libraries/services/functions.php");
+
 
 if ($_GET) {
     $category_id = $_GET['category_id'];
     $recipes = selectAllBy($pdo, 'recipes', 'category_id', $category_id);
     $category = selectOneBy($pdo, 'categories', 'id', $category_id);
 }
-
+$i = 0;
 foreach ($recipes as $recipe) {
 
     $recipe_id = $recipe['id'];
@@ -30,7 +32,8 @@ foreach ($recipes as $recipe) {
     }
 
     //Infos pour l'affichage
-    $datas[$recipe['id']] = [
+    $datas[$i] = [
+        "recipe_id" => $recipe['id'],
         "recipe_title" => $recipe['title'],
         "author" => $autor,
         "date" => $recipe_date,
@@ -40,4 +43,8 @@ foreach ($recipes as $recipe) {
         "srcImg" => $srcImg,
         "altImg" => $altImg
     ];
+    $i++;
 }
+
+$template = "../templates/show_recipes.php";
+include("../../layout.php");

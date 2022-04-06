@@ -1,7 +1,7 @@
 <?php
 session_start();
 require('../../libraries/services/functions.php');
-$pdo = getPdo();
+
 
 if (!empty($_GET['recipe_id'])) {
     $recipe_id = $_GET['recipe_id'];
@@ -17,5 +17,5 @@ if (!empty($_GET['recipe_id'])) {
     deleteById($pdo, 'comments', 'recipe_id', $recipe_id);
     deleteById($pdo, 'recipes', 'id', $recipe_id);
 
-    header("location: ../templates/show_my_recipes.php?category_id=$category_id");
+    header("location: ../controller/ShowMyRecipes.php?category_id=$category_id");
 }

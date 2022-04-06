@@ -1,14 +1,9 @@
-<?php
-include('../../layout.php');
-include('../controller/ShowRecipes.php');
-?>
-
 <section class="first-container flex-wrap">
 
 	<?php foreach ($datas as $data) : ?>
 
 		<article class="container-article-show_recipes shadow effect-up">
-			<a title="Afficher la recette" class="content-article" href="show_recipe.php?recipe_id=<?= $recipe_id; ?>">
+			<a title="Afficher la recette" class="content-article" href="../controller/ShowRecipe.php?recipe_id=<?= $data['recipe_id']; ?>">
 				<section>
 					<img src="<?= $data['srcImg']; ?>" alt="<?= $data['altImg']; ?>">
 				</section>

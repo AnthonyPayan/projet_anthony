@@ -1,6 +1,6 @@
 <?php
 require('../../libraries/services/functions.php');
-$pdo = getPdo();
+
 
 if (!empty($_POST)) {
 	move_uploaded_file($_FILES["image"]["tmp_name"], getcwd() . "/../src/img/" . $_FILES["image"]["name"]);

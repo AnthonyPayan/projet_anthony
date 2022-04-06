@@ -1,13 +1,3 @@
-<?php
-session_start();
-require('libraries/services/functions.php');
-$pdo = getPdo();
-
-if ($_SESSION) {
-    $session_id = $_SESSION['id'];
-    $session_name = selectOneByFetch($pdo, 'nickname', 'users', 'id', $session_id);
-} ?>
-
 <!doctype html>
 <html lang="fr">
 
@@ -28,11 +18,11 @@ if ($_SESSION) {
     <header>
         <nav>
             <a href="/index.php"><i class="fas fa-home"></i><span>Accueil</span></a>
-            <a href="/public/templates/add_recipe.php"><i class="fas fa-plus"></i><span>Recette</span></a>
-            <a href="/public/templates/categories.php">
+            <a href="/public/controller/NewRecipe.php"><i class="fas fa-plus"></i><span>Recette</span></a>
+            <a href="/public/controller/ShowCategories.php">
                 <i class="fas fa-book"></i><span>Recettes</span>
             </a>
-            <a href="/public/templates/profil.php?user_id=<?= $_SESSION['id']; ?>">
+            <a href="/public/controller/Profil.php?user_id=<?= $_SESSION['id']; ?>">
                 <i class="fas fa-user"></i><span>Mon profil</span>
             </a>
 
@@ -49,3 +39,4 @@ if ($_SESSION) {
         </nav>
     </header>
     <main>
+        <?php include($template);

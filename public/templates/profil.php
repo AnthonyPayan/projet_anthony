@@ -1,13 +1,8 @@
-<?php
-include('../../profil_layout.php');
-include('../controller/Profil.php');
-?>
-
 <section class="profil-head">
 
     <a title="Retour à l'accueil du site" class="zoom" href="/">Retour</a>
-    <a class="zoom" href="/public/templates/show_my_categories.php">Mes recettes<?= $ifNotification; ?></a>
-    <a class="zoom" href="/public/templates/profil_option.php?user_id=<?= $_SESSION['id']; ?>">Options</a>
+    <a class="zoom" href="/public/controller/ShowMyCategories.php">Mes recettes<?= $ifNotification; ?></a>
+    <a class="zoom" href="/public/controller/ProfilOption.php?user_id=<?= $_SESSION['id']; ?>">Options</a>
 
 </section>
 

@@ -1,8 +1,10 @@
 <?php
+require("../../libraries/services/functions.php");
+session_start();
+
 $categories = selectAll($pdo, 'categories');
 $recipes = selectOneByAll($pdo, 'category_id', 'recipes', 'user_id', $_SESSION['id']);
 
-// $recipes = [];
 
 if (!isset($_SESSION['id'])) {
     header("location: error.php?error=3");
@@ -35,3 +37,6 @@ foreach ($categories as $category) {
         unset($recipeNumber[$category['id']]);
     }
 }
+
+$template = "../templates/show_my_categories.php";
+include("../../profil_layout.php");

@@ -1,4 +1,6 @@
 <?php
+require('../../libraries/services/functions.php');
+
 
 $categories = selectAll($pdo, 'categories');
 $recipes = selectAllByFetchAll($pdo, 'category_id', 'recipes');
@@ -39,3 +41,6 @@ if (!empty($recipes)) {
 } else {
    $classCategory = NULL;
 }
+
+$template = ("../templates/categories.php");
+include('../../layout.php');

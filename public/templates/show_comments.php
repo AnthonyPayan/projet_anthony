@@ -1,8 +1,3 @@
-<?php
-include('../../layout.php');
-include('../controller/ShowComments.php');
-?>
-
 <section class="section-show-recipe">
 
 	<article class="article-show-recipe">
@@ -20,7 +15,7 @@ include('../controller/ShowComments.php');
 			<p class="p-detail">Posté par <?= $recipes['nickname']; ?></p>
 			<p class="p-detail">Le <?= $date_recipe; ?></p>
 			<p class="p-detail">Catégorie
-				<a title="Voir les recette de la catégorie <?= $recipes['name']; ?>" href="show_recipes.php?category_id=<?= $recipes['category_id']; ?>">
+				<a title="Voir les recette de la catégorie <?= $recipes['name']; ?>" href="../controller/ShowRecipes.php?category_id=<?= $recipes['category_id']; ?>">
 					<?= $recipes['name']; ?>
 				</a>
 			</p>
@@ -45,7 +40,7 @@ include('../controller/ShowComments.php');
 	<section class="show-recipe-section-link flex flex-wrap">
 
 		<?php if ($_SESSION) : ?>
-			<a href="add_comment.php?recipe_id=<?= $recipe_id; ?>" class="btn">Ajouter un commentaire</a>
+			<a href="../controller/NewComment.php?recipe_id=<?= $recipe_id; ?>" class="btn">Ajouter un commentaire</a>
 		<?php endif; ?>
 
 	</section>

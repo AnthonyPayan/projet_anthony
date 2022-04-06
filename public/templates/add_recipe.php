@@ -1,23 +1,11 @@
-<?php
-include('../../layout.php');
-
-if (isset($_SESSION['role'])) {
-    $user_id = $_SESSION['id'];
-    $categories = selectAll($pdo, 'categories');
-} else {
-    header("location: error.php?error=3");
-} ?>
-
-
 <form method="POST" action="../controller/AddRecipe.php" enctype="multipart/form-data">
 
-
     <input id="user_id" name="user_id" type="hidden" value="<?= $user_id; ?>">
-
 
     <section class="form-section">
         <label for="category">Choix de la catégorie</label>
         <select name="category" class="form-control" id="category">
+            <!-- TODO -->
             <?php $only_one_category = countOneTable($pdo, 'id', 'count_category', 'categories');
             if ($only_one_category['count_category'] > 1) {
                 foreach ($categories as $category) {
@@ -30,12 +18,11 @@ if (isset($_SESSION['role'])) {
                     echo '<option value=' . $category['id'] . '>' . $category['name'] . '</option>';
                 }
             } ?>
+            <!-- TODO -->
         </select>
     </section>
 
-
     <?php $only_one_category = countOneTable($pdo, 'id', 'id_category', 'categories'); ?>
-
 
     <?php if ($only_one_category['id_category'] == 1) : ?>
         <section class="form-section">

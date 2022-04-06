@@ -1,4 +1,7 @@
 <?php
+require("../../libraries/services/functions.php");
+session_start();
+
 $user_id = $_SESSION['id'];
 $category_id = $_GET['category_id'];
 
@@ -7,3 +10,6 @@ if (empty($category_id)) {
 } else {
    $recipes = selectByWaW($pdo, 'recipes', 'category_id', 'user_id', $category_id, $user_id);
 }
+
+$template = "../templates/show_my_recipes.php";
+include("../../profil_layout.php");

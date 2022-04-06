@@ -1,4 +1,7 @@
 <?php
+require("../../libraries/services/functions.php");
+session_start();
+
 
 if (empty($_GET['recipe_id'])) {
    header("location: error.php?error=2");
@@ -29,3 +32,7 @@ if (!empty($recipe['image'])) {
    $srcImg = "https://via.placeholder.com/350x150";
    $altImg = "Cette recette ne comporte pas d'image ceci est une image de remplacement";
 }
+
+
+$template = "../../public/templates/show_my_recipe.php";
+include("../../profil_layout.php");

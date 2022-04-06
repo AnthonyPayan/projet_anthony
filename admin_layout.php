@@ -2,7 +2,7 @@
 require('libraries/services/functions.php');
 session_start();
 adminCheck();
-$pdo = getPdo();
+// $pdo = getPdo();
 ?>
 <!doctype html>
 <html lang="fr">

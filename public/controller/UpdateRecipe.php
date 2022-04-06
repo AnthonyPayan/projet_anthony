@@ -1,6 +1,7 @@
 <?php
 require('../../libraries/services/functions.php');
-$pdo = getPdo();
+
+
 
 if (!empty($_POST)) {
     $recipe_id = $_POST['recipe_id'];
@@ -14,7 +15,7 @@ if (!empty($_POST)) {
         $sql = "UPDATE recipes SET title = ?, description = ?, user_id = ?, category_id = ? WHERE id = $recipe_id";
         $query = $pdo->prepare($sql);
         $query->execute([$title, $description, $user_id, $category_id]);
-        header("location: ../../public/templates/show_my_categories.php");
+        header("location: ../../public/controller/ShowMyCategories.php");
         exit();
     }
     if (!empty($_FILES) && $_FILES['image']['name'] != '') {
@@ -25,7 +26,7 @@ if (!empty($_POST)) {
         $sql = "UPDATE recipes SET title = ?, description = ?, image = ?, user_id = ?, category_id = ? WHERE id = $recipe_id";
         $query = $pdo->prepare($sql);
         $query->execute([$title, $description, $image, $user_id, $category_id]);
-        header("location: ../../public/templates/show_my_categories.php");
+        header("location: ../../public/controller/ShowMyCategories.php");
         exit();
     }
 }

@@ -1,4 +1,6 @@
 <?php
+require('../../libraries/services/functions.php');
+session_start();
 
 if (!isset($_SESSION['role'])) {
     header("location: error.php?error=3");
@@ -25,3 +27,5 @@ if ($_SESSION) {
         $ifNotification = NULL;
     }
 }
+$template = "../../public/templates/profil.php";
+include("../../profil_layout.php");

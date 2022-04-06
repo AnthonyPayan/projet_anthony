@@ -1,6 +1,6 @@
 <?php
 require('../../libraries/services/functions.php');
-$pdo = getPdo();
+
 
 if (isset($_POST)) {
 	$ranked = intval($_POST['ranked']);
@@ -13,7 +13,7 @@ if (isset($_POST)) {
 	$query = $pdo->prepare($sql);
 	$query->execute([$comment, $ranked, $user_id, $recipe_id]);
 
-	header("location: /public/templates/show_comments.php?recipe_id=$recipe_id");
+	header("location: /public/controller/ShowComments.php?recipe_id=$recipe_id");
 	exit();
 } else {
 	echo 'Pas de requête reçu dans AddComment.php';

@@ -1,6 +1,6 @@
 <?php
 require('../../libraries/services/functions.php');
-$pdo = getPdo();
+
 if (!empty($_POST['nickname'])) {
     $nickname = $_POST['nickname'];
     $user = selectOneBy($pdo, "users", 'nickname', $nickname);

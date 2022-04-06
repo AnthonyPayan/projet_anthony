@@ -1,9 +1,3 @@
-<?php
-include('../../profil_layout.php');
-include('../controller/ShowMyRecipe.php');
-?>
-
-
 <section class="section-show-recipe">
     <article class="article-show-recipe">
         <section class="show-recipe-section-img">
@@ -14,7 +8,7 @@ include('../controller/ShowMyRecipe.php');
             <p class="p-detail">Posté par <?= $user['nickname']; ?></p>
             <p class="p-detail">Le <?= $date_recipe; ?></p>
             <p class="p-detail">Catégorie
-                <a href="show_recipes.php?category_id=<?= $recipe_category; ?>">
+                <a href="ShowRecipes.php?category_id=<?= $recipe_category; ?>">
                     <?= $category['name']; ?>
                 </a>
             </p>
@@ -24,7 +18,7 @@ include('../controller/ShowMyRecipe.php');
             <?php ranking($count['average']); ?>
             <?php if ($ranked_count['ranked_count'] > 0) : ?>
 
-                <a href="show_comments.php?recipe_id=<?= $recipe_id; ?>">
+                <a href="/ShowComments.php?recipe_id=<?= $recipe_id; ?>">
                     <span>sur <?= $ranked_count['ranked_count']; ?> avis</span>
                 </a>
 
@@ -38,7 +32,7 @@ include('../controller/ShowMyRecipe.php');
             <p class="p-detail"><?= $recipe['description']; ?></p>
         </section>
         <section class="link">
-            <a href="show_my_recipes.php?category_id=<?= $recipe_category; ?>">Retour à mes recettes</a>
+            <a href="/public/controller/ShowMyRecipes.php?category_id=<?= $recipe_category; ?>">Retour à mes recettes</a>
         </section>
     </article>
 </section>

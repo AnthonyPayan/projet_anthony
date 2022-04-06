@@ -2,6 +2,7 @@
 include('sql_requests.php');
 include('avatar.php');
 include('constants.php');
+include('bdd.php');
 
 
 function getPdo()
