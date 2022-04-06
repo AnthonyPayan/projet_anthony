@@ -15,6 +15,12 @@ if (!isset($_SESSION['role'])) {
 $user = selectOneBy($pdo, 'users', 'id', $_GET['user_id']);
 $timestamp = strtotime($user['registration_at']);
 
+$classDisplay = NULL;
+
+//Ajout la class displaynone pour éviter que l'admin ne supprime son compte.
+if ($_SESSION['role'] == ADMIN) {
+    $classDisplay = "displaynone";
+}
 
 $template = "../templates/profil_option.php";
 include("../../profil_layout.php");

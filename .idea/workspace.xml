@@ -2,41 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d238a1d-f6f1-4ba5-b8bd-86705c71be9c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/admin_layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_layout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/layout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraries/services/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/services/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profil_layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/profil_layout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/controller/AddComment.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/controller/AddComment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/controller/AddRecipe.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/controller/AddRecipe.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/controller/DeleteRecipe.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/controller/DeleteRecipe.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/controller/DeleteUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/controller/DeleteUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/controller/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/controller/Login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/controller/Profil.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/controller/Profil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/controller/ProfilOption.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/controller/ProfilOption.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/controller/Registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/controller/Registration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/controller/ShowCategories.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/controller/ShowCategories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/controller/ShowComments.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/controller/ShowComments.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/controller/ShowMyCategories.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/controller/ShowMyCategories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/controller/ShowMyRecipe.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/controller/ShowMyRecipe.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/controller/ShowMyRecipes.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/controller/ShowMyRecipes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/controller/ShowRecipe.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/controller/ShowRecipe.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/controller/ShowRecipes.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/controller/ShowRecipes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/controller/UpdateRecipe.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/controller/UpdateRecipe.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/controller/UpdateRecipeCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/controller/UpdateRecipeCategory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/add_comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/add_comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/controller/PreUpdateRecipeCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/controller/PreUpdateRecipeCategory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/templates/add_recipe.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/add_recipe.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/categories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/profil.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/profil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/profil_option.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/profil_option.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/show_comments.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/show_comments.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/show_my_categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/show_my_categories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/show_my_recipe.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/show_my_recipe.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/show_my_recipes.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/show_my_recipes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/show_recipe.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/show_recipe.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/show_recipes.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/show_recipes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/update_recipe.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/update_recipe.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +42,7 @@
       <updated>1649100695385</updated>
       <workItem from="1649100696812" duration="364000" />
       <workItem from="1649172716908" duration="257000" />
+      <workItem from="1649232651395" duration="980000" />
     </task>
     <servers />
   </component>

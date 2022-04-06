@@ -4,7 +4,6 @@
 require('libraries/services/functions.php');
 $pdo = getPdo();
 
-
 //nombre de recette maximum par page.
 $max_elements = 8;
 
@@ -17,8 +16,9 @@ $recipes = selectPaginationJoin($pdo, 'recipes', $_GET['page'], $max_elements);
 $nb_recipes = nbPages($pdo);
 $pagination = ceil($nb_recipes['count_recipe'] / $max_elements);
 
+
 if (!empty($recipes)) {
-	$classNoRecipe = NULL;
+	$classNoRecipe = "displaynone";
 
 	foreach ($recipes as $recipe) {
 		$recipe_id = $recipe['id'];
@@ -51,15 +51,21 @@ if (!empty($recipes)) {
 		];
 	}
 } else {
-	$classNoRecipe = 'class="container-info"';
+	$classNoRecipe = "container-info";
 }
 
 //Pagination
 $paginationViews = [];
 
-for ($i = 1; $i <= $pagination; $i++) {
-	$paginationViews[$i] = ["pagination" => $i];
+if (count($recipes) > 6) {
+	for ($i = 1; $i <= $pagination; $i++) {
+		$paginationViews[$i] = ["pagination" => $i];
+	}
+	$displayPagination = "section-pagination";
+} else {
+	$displayPagination = "displaynone";
 }
+
 
 $template = "public/templates/home.php";
 include('layout.php');

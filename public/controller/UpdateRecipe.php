@@ -2,7 +2,6 @@
 require('../../libraries/services/functions.php');
 
 
-
 if (!empty($_POST)) {
     $recipe_id = $_POST['recipe_id'];
     $title = htmlentities($_POST['title']);

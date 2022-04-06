@@ -7,10 +7,6 @@
 <section class="profil-section">
     <section class="link">
         <a href="/public/controller/PreChangePassword.php?user_id=<?= $user["id"]; ?>">Changer de mot de passe</a>
-
-        <?php if ($_SESSION['role'] != ADMIN) : ?>
-            <a class="danger user-delete" href="/public/controller/DeleteUserConfirm.php?user_id=<?= $user["id"]; ?>">Supprimer mon compte</a>
-        <?php endif; ?>
-
+        <a class="<?= $classDisplay; ?> danger user-delete" href="/public/controller/DeleteUserConfirm.php?user_id=<?= $user["id"]; ?>">Supprimer mon compte</a>
     </section>
 </section>

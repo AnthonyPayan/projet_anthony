@@ -6,19 +6,9 @@
     <section class="form-section">
         <label for="category">Choix de la catégorie</label>
         <select name="category" class="form-control" id="category">
-
-            <?php foreach ($categories as $category) : ?>
-
-                <?php if ($category['id'] == $recipe['category_id']) : ?>
-                    <option value="<?= $category['id']; ?>" selected><?= $category['name']; ?></option>
-                <?php elseif ($category['id'] == ATTENTE) : ?>
-                    <?php continue; ?>
-                <?php else : ?>
-                    <option value="<?= $category['id']; ?>"><?= $category['name']; ?></option>
-                <?php endif; ?>
-
+            <?php foreach ($categoriesArray as $categoryArray => $number) : ?>
+                <option value="<?= $number['category_id']; ?>" <?= $number['attribute']; ?>><?= $number['category_name']; ?></option>
             <?php endforeach; ?>
-
         </select>
     </section>
 
@@ -34,13 +24,7 @@
 
     <section class="form-section">
         <section class="show-recipe-section-img">
-
-            <?php if (!empty($recipe['image'])) : ?>
-                <img src="/public/src/img/<?= $recipe['image']; ?>" alt="image qui représente">
-            <?php else : ?>
-                <img src="https://via.placeholder.com/350x150" alt="image qui représente">
-            <?php endif; ?>
-
+            <img src="<?= $srcImg; ?>" alt="<?= $altImg; ?>">
         </section>
     </section>
 

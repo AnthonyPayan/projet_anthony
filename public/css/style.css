@@ -624,6 +624,10 @@ article img {
 	margin-bottom: 50px;
 }
 
+.show-recipe-ranked {
+	color: orange;
+}
+
 @media (max-width:408px) {
 
 	.show-recipe-section-img,
@@ -796,4 +800,9 @@ article img {
 .scroll-table a {
 	width: 13%;
 	text-align: right;
+}
+
+/* TEST */
+.displaynone {
+	display: none;
 }

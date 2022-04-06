@@ -3,13 +3,7 @@
 	<article class="article-show-recipe">
 		<section class="show-recipe-section-img">
 			<h2><?= $recipes['title']; ?></h2>
-
-			<?php if (empty($recipes['image'])) : ?>
-				<img src="https://via.placeholder.com/350x150" class="card-img-top" alt="Cette recette ne comporte pas d'image ceci est une image de remplacement">
-			<?php else : ?>
-				<img src="../src/img/<?= $recipes['image']; ?>" class="card-img-top" alt="<?= $recipes['title']; ?>">
-			<?php endif; ?>
-
+			<img src="<?= $srcImg; ?>" alt="<?= $altImg; ?>" class="card-img-top">
 		</section>
 		<section class="show-recipe-detail">
 			<p class="p-detail">Posté par <?= $recipes['nickname']; ?></p>
@@ -26,23 +20,16 @@
 			<?php ranking($count['average']); ?>
 
 			<a title="Voir les avis pour cette recette" href="#section-comments_link">
-
 				<?php if ($ranked_count['ranked_count'] >= 1) : ?>
 					<span>sur <?= $ranked_count['ranked_count']; ?> avis</span>
 				<?php else : ?>
-					<span>0 <i class="far fa-comment"></i></span>
+					<span>sur 0 avis</span>
 				<?php endif; ?>
-
 			</a>
 		</section>
 	</article>
-
 	<section class="show-recipe-section-link flex flex-wrap">
-
-		<?php if ($_SESSION) : ?>
-			<a href="../controller/NewComment.php?recipe_id=<?= $recipe_id; ?>" class="btn">Ajouter un commentaire</a>
-		<?php endif; ?>
-
+		<a href="../controller/NewComment.php?recipe_id=<?= $recipe_id; ?>" class="<?= $classDisplay; ?> btn">Ajouter un commentaire</a>
 	</section>
 
 	<section class="show-recipe-description" id="section-comments_link">

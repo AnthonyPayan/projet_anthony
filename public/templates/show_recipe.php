@@ -16,6 +16,7 @@
 
         <section class="show-recipe-ranked">
 
+            <!-- Affichage notation -->
             <?php ranking($count['average']); ?>
 
             <?php if ($ranked_count['ranked_count'] > 0) : ?>
@@ -23,7 +24,7 @@
                 <a title="Voir les avis pour cette recette" href="../controller/ShowComments.php?recipe_id=<?= $recipe_id; ?>"><span>sur <?= $ranked_count['ranked_count']; ?> avis</span></a>
 
             <?php else : ?>
-                <span>0<i class="far fa-comment"></i></span>
+                <span>sur 0 avis</span>
             <?php endif; ?>
 
         </section>

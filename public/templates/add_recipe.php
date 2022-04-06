@@ -4,32 +4,13 @@
 
     <section class="form-section">
         <label for="category">Choix de la catégorie</label>
+
         <select name="category" class="form-control" id="category">
-            <!-- TODO -->
-            <?php $only_one_category = countOneTable($pdo, 'id', 'count_category', 'categories');
-            if ($only_one_category['count_category'] > 1) {
-                foreach ($categories as $category) {
-                    if ($category['id'] != ATTENTE) {
-                        echo '<option value=' . $category['id'] . '>' . $category['name'] . '</option>';
-                    }
-                }
-            } else {
-                foreach ($categories as $category) {
-                    echo '<option value=' . $category['id'] . '>' . $category['name'] . '</option>';
-                }
-            } ?>
-            <!-- TODO -->
+            <?php foreach ($cats as $cat => $number) : ?>
+                <option value="<?= $number['category_id']; ?>"><?= $number['category_name']; ?></option>
+            <?php endforeach; ?>
         </select>
     </section>
-
-    <?php $only_one_category = countOneTable($pdo, 'id', 'id_category', 'categories'); ?>
-
-    <?php if ($only_one_category['id_category'] == 1) : ?>
-        <section class="form-section">
-            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-            <strong>Votre recette est automatiquement placé dans la catégorie "Attente", un méssage avec un lien vous sera envoyé quand d'autres catégories seront disponible</strong>
-        </section>
-    <?php endif; ?>
 
     <section class="form-section">
         <label for="title" class="label_title">Titre de votre recette</label>

@@ -29,7 +29,7 @@ if (!empty($recipe['image'])) {
    $srcImg = '/public/src/img/' . $recipe['image'] . '';
    $altImg = $recipe['title'];
 } else {
-   $srcImg = "https://via.placeholder.com/350x150";
+   $srcImg = "https://via.placeholder.com/350x350";
    $altImg = "Cette recette ne comporte pas d'image ceci est une image de remplacement";
 }
 
