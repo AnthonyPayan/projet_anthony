@@ -3,7 +3,7 @@ require("../../libraries/services/functions.php");
 session_start();
 
 if ($_GET['recipe_id'] == FALSE || !isset($_GET)) {
-    header("location: ../../public/templates/error.php?error=2");
+    header("location: /public/controller/Error.php?error=2");
 } else {
     $recipe_id = $_GET['recipe_id'];
     $recipes = allDatas($pdo, $recipe_id);
@@ -20,15 +20,16 @@ if ($_SESSION['user'] === "admin" || $_SESSION['user'] === "user") {
     $classDisplay = "displaynone";
 }
 
-$comments = [];
-
 $datas = [];
 $number = 0;
-$infoDisplay = "displaynone";
-$infoDisplay = "displaynone";
-$linkDisplay = "displaynone";
 
 if (!empty($comments)) {
+
+    $infoDisplay = "displaynone";
+    $linkDisplay = "displaynone";
+    $containerDisplay = "displaynone";
+    $containerCommentDisplay = "show-recipe-description section-comments";
+
     foreach ($comments as $comment) {
         $ranked = rankingStack($comment['ranked']);
         $datas[$number] = [
@@ -39,9 +40,12 @@ if (!empty($comments)) {
         $number++;
     }
 } else {
-    $infoDisplay = "container-info";
+
     $infoDisplay = "p-detail";
     $linkDisplay = "btn";
+    $containerDisplay = "container-info";
+    $containerCommentDisplay = "displaynone";
+    $commentTitledisplay = "displaynone";
 }
 
 $imgSrcAlt = getImg($recipes['image'], $recipes['title']);

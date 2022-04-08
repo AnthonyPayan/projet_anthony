@@ -32,8 +32,9 @@
 		<h3>Préparation :</h3>
 		<p class="p-detail"> <?= $recipes['description']; ?></p>
 	</section>
-	<section class="show-recipe-description section-comments">
-		<h3>Commentaires :</h3>
+
+	<section class="<?= $containerCommentDisplay; ?>">
+		<h3 class="<?= $commentTitleDisplay; ?>">Commentaires :</h3>
 		<?php foreach ($datas as $data => $number) : ?>
 			<p class="p-detail"><?= $number['nickname']; ?>
 				<span> "<?= $number['comment']; ?>"</span>
@@ -45,6 +46,7 @@
 			</p>
 		<?php endforeach; ?>
 	</section>
+
 	<section class="<?= $containerDisplay; ?>">
 		<p class="<?= $infoDisplay; ?>">Il n'y a pas de commentaire pour cette recette.</p>
 		<a class="<?= $linkDisplay; ?>" href="/public/controller/NewComment.php?recipe_id=<?= $recipe_id; ?>">Commenter</a>

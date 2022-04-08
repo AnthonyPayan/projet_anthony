@@ -3,13 +3,14 @@ require('../../libraries/services/functions.php');
 session_start();
 
 if (!isset($_SESSION['role'])) {
-    header("location: error.php?error=3");
+    header("location: /public/controller/Error.php?error=3");
 } elseif (!isset($_GET)) {
-    header("location: error.php?error=2");
+    header("location: /public/controller/Error.php?error=2");
 } elseif (!isset($_GET['user_id'])) {
-    header("location: error.php?error=2");
+    header("location: /public/controller/Error.php?error=2");
 } elseif ($_GET['user_id'] !== $_SESSION['id']) {
-    header("location: error.php?error=4");
+    header("location: /public/controller/Error.php?error=4");
+    exit();
 }
 
 $user_id = $_SESSION['id'];

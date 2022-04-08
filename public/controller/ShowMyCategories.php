@@ -8,7 +8,7 @@ $recipes = selectOneByAll($pdo, 'category_id', 'recipes', 'user_id', $_SESSION['
 $displayLink = "displaynone";
 
 if (!isset($_SESSION['id'])) {
-    header("location: error.php?error=3");
+    header("location: /public/controller/Error.php?error=3");
 } else {
     $session_id = $_SESSION['id'];
 }

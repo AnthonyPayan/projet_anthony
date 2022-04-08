@@ -15,11 +15,11 @@ if (!empty($_POST['nickname'])) {
             $_SESSION['avatar'] = $user['avatar'];
             header('location: /index.php');
         } else {
-            header('location: /public/templates/error.php?error=7');
+            header('location: /public/controller/Error.php?error=7');
         }
     } else {
-        header('location: /public/templates/error.php?error=8');
+        header('location: /public/controller/Error.php?error=8');
     }
 } else {
-    header('location: /public/templates/error.php?error=9');
+    header('location: /public/controller/Error.php?error=9');
 }

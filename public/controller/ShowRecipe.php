@@ -5,13 +5,13 @@ session_start();
 if ($_GET['recipe_id']) {
     $recipe_id = $_GET['recipe_id'];
 } else {
-    header("location: error.php?error=2");
+    header("location: /public/controller/Error.php?error=2");
 }
 
 $recipe = selectOneBy($pdo, 'recipes', 'id', $recipe_id);
 
 if ($recipe == false) {
-    header("location: error.php?error=1");
+    header("location: /public/controller/Error.php?error=1");
 }
 
 $recipe_category = $recipe['category_id'];

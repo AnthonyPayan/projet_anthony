@@ -4,14 +4,12 @@
 
 <section class="table-section x95">
 
-
     <section class="<?= $containerDisplay; ?>">
         <p>Désolé vous n'avez plus de recette à afficher</p>
         <a class="btn" href="/public/controller/Profil.php?user_id=<?= $_SESSION['id']; ?>">
             <span>Retour</span>
         </a>
     </section>
-
 
     <?php foreach ($recipes as $recipe) : ?>
         <?php $date = showDate($recipe['date_recipe']); ?>
