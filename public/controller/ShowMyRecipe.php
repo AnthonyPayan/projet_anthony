@@ -24,14 +24,8 @@ $count = roundAvgFetch($pdo, 'ranked', 'average', 'comments', 'recipe_id', $reci
 $date_recipe = showDate($recipe['date_recipe']);
 
 
-//définition src img
-if (!empty($recipe['image'])) {
-   $srcImg = '/public/src/img/' . $recipe['image'] . '';
-   $altImg = $recipe['title'];
-} else {
-   $srcImg = "https://via.placeholder.com/350x350";
-   $altImg = "Cette recette ne comporte pas d'image ceci est une image de remplacement";
-}
+//définition src img & alt
+$imgSrcAlt = getImg($recipe['image'], $recipe['title']);
 
 
 $template = "../../public/templates/show_my_recipe.php";

@@ -2,7 +2,7 @@
     <article class="article-show-recipe">
         <section class="show-recipe-section-img">
             <h2><?= $recipe['title']; ?></h2>
-            <img src="<?= $srcImg; ?>" alt="<?= $altImg; ?>">
+            <img src="<?= $imgSrcAlt['src']; ?>" alt="<?= $imgSrcAlt['alt']; ?>">
         </section>
         <section class="show-recipe-detail">
             <p class="p-detail">Posté par <?= $user['nickname']; ?></p>

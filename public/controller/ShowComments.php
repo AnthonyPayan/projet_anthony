@@ -19,13 +19,8 @@ if (isset($_SESSION['user'])) {
     $classDisplay = "displaynone";
 }
 
-if (!empty($recipes['image'])) {
-    $srcImg = '/public/src/img/' . $recipes['image'] . '';
-    $altImg = $recipes['title'];
-} else {
-    $srcImg = "https://via.placeholder.com/350x350";
-    $altImg = "Cette recette ne comporte pas d'image ceci est une image de remplacement";
-}
+
+$imgSrcAlt = getImg($recipes['image'], $recipes['title']);
 
 $template = "../templates/show_comments.php";
 include("../../layout.php");

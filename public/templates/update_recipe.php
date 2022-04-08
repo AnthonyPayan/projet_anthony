@@ -24,7 +24,7 @@
 
     <section class="form-section">
         <section class="show-recipe-section-img">
-            <img src="<?= $srcImg; ?>" alt="<?= $altImg; ?>">
+            <img src="<?= $imgSrcAlt["src"]; ?>" alt="<?= $imgSrcAlt["alt"]; ?>">
         </section>
     </section>
 

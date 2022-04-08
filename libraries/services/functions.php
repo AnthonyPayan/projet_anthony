@@ -78,3 +78,19 @@ function rankingStack($rank)
     }
     return $array;
 }
+
+function getImg($recipeImg, $recipeTitle)
+{
+    if (!empty($recipeImg)) {
+
+        $array["src"] = '/public/src/img/' . $recipeImg . '';
+        $array["alt"] = $recipeTitle;
+
+        return $array;
+    } else {
+        $array["src"] = "https://via.placeholder.com/350x350";
+        $array["alt"] = "Cette recette ne comporte pas d'image ceci est une image de remplacement";
+
+        return $array;
+    }
+}

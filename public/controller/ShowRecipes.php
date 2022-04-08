@@ -23,13 +23,7 @@ foreach ($recipes as $recipe) {
     $ranked_count = countAsWhere($pdo, 'ranked', 'ranked_count', 'comments', 'recipe_id', $recipe_id);
 
     //Traitement SRC de l'image et ALT
-    if (!empty($recipe['image'])) {
-        $srcImg = '/public/src/img/' . $recipe['image'] . '';
-        $altImg = $recipe['title'];
-    } else {
-        $srcImg = "https://via.placeholder.com/350x350";
-        $altImg = "Cette recette ne comporte pas d'image ceci est une image de remplacement";
-    }
+    $imgSrcAlt = getImg($recipe['image'], $recipe['title']);
 
     //Infos pour l'affichage
     $datas[$i] = [
@@ -40,8 +34,8 @@ foreach ($recipes as $recipe) {
         "category" => $category['name'],
         "rank" => $count['average'],
         "ranked_count" => $ranked_count['ranked_count'],
-        "srcImg" => $srcImg,
-        "altImg" => $altImg
+        "srcImg" => $imgSrcAlt['src'],
+        "altImg" => $imgSrcAlt['alt']
     ];
     $i++;
 }

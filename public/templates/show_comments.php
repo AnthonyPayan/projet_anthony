@@ -3,7 +3,7 @@
 	<article class="article-show-recipe">
 		<section class="show-recipe-section-img">
 			<h2><?= $recipes['title']; ?></h2>
-			<img src="<?= $srcImg; ?>" alt="<?= $altImg; ?>" class="card-img-top">
+			<img src="<?= $imgSrcAlt['src']; ?>" alt="<?= $imgSrcAlt['alt']; ?>" class="card-img-top">
 		</section>
 		<section class="show-recipe-detail">
 			<p class="p-detail">Posté par <?= $recipes['nickname']; ?></p>

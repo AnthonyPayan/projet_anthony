@@ -31,13 +31,9 @@ foreach ($categories as $category) {
     }
 }
 
-if (!empty($recipe['image'])) {
-    $srcImg = '/public/src/img/' . $recipe['image'] . '';
-    $altImg = $recipe['title'];
-} else {
-    $srcImg = "https://via.placeholder.com/350x350";
-    $altImg = "Cette recette ne comporte pas d'image ceci est une image de remplacement";
-}
+//Recupération de la source et du Alt de l'image
+$imgSrcAlt = getImg($recipe['image'], $recipe['title']);
+
 
 
 $template = "../templates/update_recipe.php";
