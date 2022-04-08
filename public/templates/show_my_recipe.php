@@ -16,15 +16,10 @@
 
         <section class="show-recipe-ranked">
             <?php ranking($count['average']); ?>
-            <?php if ($ranked_count['ranked_count'] > 0) : ?>
 
-                <a href="/ShowComments.php?recipe_id=<?= $recipe_id; ?>">
-                    <span>sur <?= $ranked_count['ranked_count']; ?> avis</span>
-                </a>
-
-            <?php else : ?>
-                <span>sur 0 avis</span>
-            <?php endif; ?>
+            <a title="Afficher les avis" href="../controller/ShowComments.php?recipe_id=<?= $recipe_id; ?>">
+                <span>sur <?= $ranked_count['ranked_count']; ?> avis</span>
+            </a>
 
         </section>
         <section class="show-recipe-description">

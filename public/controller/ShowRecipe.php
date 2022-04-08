@@ -1,6 +1,6 @@
 <?php
 require("../../libraries/services/functions.php");
-
+session_start();
 
 if ($_GET['recipe_id']) {
     $recipe_id = $_GET['recipe_id'];
@@ -23,6 +23,13 @@ $ranked_count = countAsWhere($pdo, 'ranked', 'ranked_count', 'comments', 'recipe
 
 //Traitement SRC de l'image et ALT
 $imgSrcAlt = getImg($recipe['image'], $recipe['title']);
+
+//Traitement de l'affichage du bouton pour commenter
+if ($_SESSION['user'] === "admin" || $_SESSION['user'] === "user") {
+    $classDisplay = "btn";
+} else {
+    $classDisplay = "displaynone";
+}
 
 $template = "../templates/show_recipe.php";
 include("../../layout.php");

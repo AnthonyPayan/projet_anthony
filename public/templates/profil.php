@@ -7,6 +7,8 @@
 </section>
 
 <!-- Si une recette ce trouve dans la catégorie ATTENTE alors cette section s'affiche -->
+
+<!-- Extraire ce IF -->
 <?php if (!empty($recipe_info['recipes_wait'])) : ?>
     <section class="container-info">
         <p>Une de vos recettes se trouve dans la catégorie "Attente"</p>

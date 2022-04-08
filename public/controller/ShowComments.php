@@ -1,6 +1,6 @@
 <?php
 require("../../libraries/services/functions.php");
-// session_start();
+session_start();
 
 if ($_GET['recipe_id'] == FALSE || !isset($_GET)) {
     header("location: ../../public/templates/error.php?error=2");
@@ -13,12 +13,12 @@ if ($_GET['recipe_id'] == FALSE || !isset($_GET)) {
     $comments = showCommentsUsers($pdo, $recipe_id);
 }
 
-if (isset($_SESSION['user'])) {
+//Traitement de l'affichage du bouton pour commenter.
+if ($_SESSION['user'] === "admin" || $_SESSION['user'] === "user") {
     $classDisplay = "btn";
 } else {
     $classDisplay = "displaynone";
 }
-
 
 $imgSrcAlt = getImg($recipes['image'], $recipes['title']);
 

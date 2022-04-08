@@ -20,22 +20,19 @@
 			<?php ranking($count['average']); ?>
 
 			<a title="Voir les avis pour cette recette" href="#section-comments_link">
-				<?php if ($ranked_count['ranked_count'] >= 1) : ?>
-					<span>sur <?= $ranked_count['ranked_count']; ?> avis</span>
-				<?php else : ?>
-					<span>sur 0 avis</span>
-				<?php endif; ?>
+				<span>sur <?= $ranked_count['ranked_count']; ?> avis</span>
 			</a>
 		</section>
 	</article>
 	<section class="show-recipe-section-link flex flex-wrap">
-		<a href="../controller/NewComment.php?recipe_id=<?= $recipe_id; ?>" class="<?= $classDisplay; ?> btn">Ajouter un commentaire</a>
+		<a href="../controller/NewComment.php?recipe_id=<?= $recipe_id; ?>" class="<?= $classDisplay; ?>">Ajouter un commentaire</a>
 	</section>
 
 	<section class="show-recipe-description" id="section-comments_link">
 		<h3>Préparation :</h3>
 		<p class="p-detail"> <?= $recipes['description']; ?></p>
 	</section>
+	<!-- Extraire ce IF -->
 	<?php if (!empty($comments)) : ?>
 		<section class="show-recipe-description section-comments">
 			<h3>Commentaires :</h3>
@@ -51,7 +48,7 @@
 	<?php else :  ?>
 		<section class="container-info">
 			<p>Il n'y a pas de commentaire pour cette recette.</p>
-			<a class="btn" href="/public/templates/add_comment.php?recipe_id=<?= $recipes['id']; ?>">Commenter</a>
+			<a class="btn" href="/public/controller/NewComment.php?recipe_id=<?= $recipe_id; ?>">Commenter</a>
 		</section>
 	<?php endif; ?>
 
