@@ -32,25 +32,23 @@
 		<h3>Préparation :</h3>
 		<p class="p-detail"> <?= $recipes['description']; ?></p>
 	</section>
-	<!-- Extraire ce IF -->
-	<?php if (!empty($comments)) : ?>
-		<section class="show-recipe-description section-comments">
-			<h3>Commentaires :</h3>
-			<?php foreach ($comments as $comment) : ?>
-				<p class="p-detail"><?= $comment['nickname']; ?>
-					<span> "<?= $comment['comment']; ?>"</span>
-				</p>
-				<p class="star_note">
-					<?php ranking($comment['ranked']); ?>
-				</p>
-			<?php endforeach; ?>
-		</section>
-	<?php else :  ?>
-		<section class="container-info">
-			<p>Il n'y a pas de commentaire pour cette recette.</p>
-			<a class="btn" href="/public/controller/NewComment.php?recipe_id=<?= $recipe_id; ?>">Commenter</a>
-		</section>
-	<?php endif; ?>
+	<section class="show-recipe-description section-comments">
+		<h3>Commentaires :</h3>
+		<?php foreach ($datas as $data => $number) : ?>
+			<p class="p-detail"><?= $number['nickname']; ?>
+				<span> "<?= $number['comment']; ?>"</span>
+			</p>
+			<p class="star_note">
+				<?php foreach ($number['ranked'] as $rank) : ?>
+					<?= $rank; ?>
+				<?php endforeach; ?>
+			</p>
+		<?php endforeach; ?>
+	</section>
+	<section class="<?= $containerDisplay; ?>">
+		<p class="<?= $infoDisplay; ?>">Il n'y a pas de commentaire pour cette recette.</p>
+		<a class="<?= $linkDisplay; ?>" href="/public/controller/NewComment.php?recipe_id=<?= $recipe_id; ?>">Commenter</a>
+	</section>
 
 </section>
 

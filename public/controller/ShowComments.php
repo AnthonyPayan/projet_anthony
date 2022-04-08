@@ -20,6 +20,30 @@ if ($_SESSION['user'] === "admin" || $_SESSION['user'] === "user") {
     $classDisplay = "displaynone";
 }
 
+$comments = [];
+
+$datas = [];
+$number = 0;
+$infoDisplay = "displaynone";
+$infoDisplay = "displaynone";
+$linkDisplay = "displaynone";
+
+if (!empty($comments)) {
+    foreach ($comments as $comment) {
+        $ranked = rankingStack($comment['ranked']);
+        $datas[$number] = [
+            "nickname" => $comment['nickname'],
+            "comment" => $comment['comment'],
+            "ranked" => rankingStack($comment['ranked'])
+        ];
+        $number++;
+    }
+} else {
+    $infoDisplay = "container-info";
+    $infoDisplay = "p-detail";
+    $linkDisplay = "btn";
+}
+
 $imgSrcAlt = getImg($recipes['image'], $recipes['title']);
 
 $template = "../templates/show_comments.php";
