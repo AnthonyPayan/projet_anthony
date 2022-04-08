@@ -7,14 +7,10 @@
 </section>
 
 <!-- Si une recette ce trouve dans la catégorie ATTENTE alors cette section s'affiche -->
-
-<!-- Extraire ce IF -->
-<?php if (!empty($recipe_info['recipes_wait'])) : ?>
-    <section class="container-info">
-        <p>Une de vos recettes se trouve dans la catégorie "Attente"</p>
-        <a href="/public/controller/PreUpdateRecipeCategory.php" class="btn">Modifier catégories.</a>
-    </section>
-<?php endif; ?>
+<section class="<?= $containerDisplay; ?>">
+    <p class="<?= $infoDisplay; ?>">Une de vos recettes se trouve dans la catégorie "Attente"</p>
+    <a href="/public/controller/PreUpdateRecipeCategory.php" class="<?= $btnDisplay; ?>">Modifier catégories.</a>
+</section>
 
 <section class="profil-section">
     <p> Profil <span><?= $user["nickname"]; ?></span></p>
