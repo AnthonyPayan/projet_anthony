@@ -5,6 +5,7 @@ session_start();
 $categories = selectAll($pdo, 'categories');
 $recipes = selectOneByAll($pdo, 'category_id', 'recipes', 'user_id', $_SESSION['id']);
 
+$displayLink = "displaynone";
 
 if (!isset($_SESSION['id'])) {
     header("location: error.php?error=3");
@@ -15,6 +16,7 @@ if (!isset($_SESSION['id'])) {
 if (empty($categories) || empty($recipes)) {
     $my_category_title = "Vous n'avez pas de recette";
     $classCategory = NULL;
+    $displayLink = "";
 } else {
     $my_category_title = "Mes recettes";
     $classCategory = 'class="categories_choice"';
