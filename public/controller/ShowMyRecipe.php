@@ -4,7 +4,7 @@ session_start();
 
 
 if (empty($_GET['recipe_id'])) {
-   header("location: error.php?error=2");
+   header("location: /public/controller/Error.php?error=2");
    exit();
 }
 
@@ -12,7 +12,7 @@ $recipe_id = $_GET['recipe_id'];
 $recipe = selectOneBy($pdo, 'recipes', 'id', $recipe_id);
 
 if ($recipe['user_id'] !== $_SESSION['id']) {
-   header("location: error.php?error=5");
+   header("location: /public/controller/Error.php?error=5");
    exit();
 }
 

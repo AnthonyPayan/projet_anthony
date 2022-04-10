@@ -3,14 +3,16 @@ require('../../libraries/services/functions.php');
 session_start();
 
 if (!isset($_SESSION['role'])) {
-    header("location: error.php?error=3");
+    header("location: /public/controller/Error.php?error=3");
 } elseif (!isset($_GET)) {
-    header("location: error.php?error=2");
+    header("location: /public/controller/Error.php?error=2");
 } elseif (!isset($_GET['user_id'])) {
-    header("location: error.php?error=2");
+    header("location: /public/controller/Error.php?error=2");
 } elseif ($_GET['user_id'] !== $_SESSION['id']) {
-    header("location: error.php?error=4");
+    header("location: /public/controller/Error.php?error=4");
+    exit();
 }
+
 $user_id = $_SESSION['id'];
 $user = selectOneBy($pdo, 'users', 'id', $_GET['user_id']);
 $timestamp = strtotime($user['registration_at']);
@@ -27,5 +29,18 @@ if ($_SESSION) {
         $ifNotification = NULL;
     }
 }
+
+//Traitement affichage modification catégories si une recette dans la catégorie "ATTENTE"
+if (!empty($recipe_info['recipes_wait'])) {
+    $btnDisplay = "btn";
+    $containerDisplay = "container-info";
+    $infoDisplay = NULL;
+} else {
+    $btnDisplay = "displaynone";
+    $containerDisplay = "displaynone";
+    $infoDisplay = "displaynone";
+}
+
+
 $template = "../../public/templates/profil.php";
 include("../../profil_layout.php");

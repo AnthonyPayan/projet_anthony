@@ -15,7 +15,7 @@
 				</section>
 				<section class="show-recipe-ranked">
 					<?php ranking($data['rank']); ?>
-					<span><?= $data['ranked_count']; ?><i class="far fa-comment"></i></span>
+					<span>sur <?= $data['ranked_count']; ?> avis</span>
 				</section>
 			</a>
 		</article>

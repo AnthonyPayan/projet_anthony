@@ -8,7 +8,7 @@ if (isset($_SESSION['role'])) {
     $user_id = $_SESSION['id'];
     $categories = selectAll($pdo, 'categories');
 } else {
-    header("location: error.php?error=3");
+    header("location: /public/controller/Error.php?error=3");
 }
 
 //Traitement de l'affichage des catégories dans le select

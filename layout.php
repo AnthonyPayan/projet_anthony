@@ -22,45 +22,24 @@ require('public/controller/Layout.php');
 	<header>
 		<nav>
 			<a title="Retour accueil du site" href="/index.php"><i class="fas fa-home"></i><span>Accueil</span></a>
-			<!--TODO: Condition dans controller -->
-			<?php if ($_SESSION) : ?>
-				<a title="Ajout d'une recette" href="/public/controller/NewRecipe.php">
-					<i class="fas fa-plus"></i><span>Recette</span>
-				</a>
-			<?php endif; ?>
-
+			<a class="<?= $classDisplaySession; ?>" title="Ajout d'une recette" href="/public/controller/NewRecipe.php">
+				<i class="fas fa-plus"></i><span>Recette</span>
+			</a>
 			<a title="Liste des recettes" href="/public/controller/ShowCategories.php">
 				<i class="fas fa-book"></i><span>Recettes</span>
 			</a>
-			<!--TODO: Condition dans controller -->
-			<?php if ($_SESSION) : ?>
-
-				<a href="/public/controller/Profil.php?user_id=<?= $session_id; ?>">
-
-					<?php if ($_SESSION) : ?>
-
-						<?php if (!empty($recipe_info['recipes_wait'])) : ?>
-							<i class="fas fa-user"></i><span>Mon profil</span><span class="span-badge"><?= $recipe_info['recipes_wait']; ?></span>
-						<?php else : ?>
-							<i class="fas fa-user"></i><span>Mon profil</span>
-						<?php endif; ?>
-					<?php endif; ?>
-
-				</a>
-				<a href="/public/controller/Logout.php">
-					<i class="fas fa-sign-out-alt"></i>
-					<span>Déconnexion</span>
-				</a>
-				<!--TODO: Condition dans controller -->
-			<?php else : ?>
-				<a href="/public/templates/login.php">
-					<i class="fas fa-sign-out-alt"></i>
-					<span>Connexion</span>
-				</a>
-
-			<?php endif; ?>
+			<a class="<?= $classDisplaySession; ?>" href="/public/controller/Profil.php?user_id=<?= $session_id; ?>">
+				<i class="fas fa-user"></i><span>Mon profil</span><?= $notifWait; ?>
+			</a>
+			<a class="<?= $classDisplaySession; ?>" href="/public/controller/Logout.php">
+				<i class="fas fa-sign-out-alt"></i>
+				<span>Déconnexion</span>
+			</a>
+			<a class="<?= $classDisplaySessionEmpty; ?>" href="/public/templates/login.php">
+				<i class="fas fa-sign-out-alt"></i>
+				<span>Connexion</span>
+			</a>
 		</nav>
-
 	</header>
 	<main>
 		<?php include($template); ?>

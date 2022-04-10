@@ -1,12 +1,11 @@
 <section class="title">
     <h3><?= $my_category_title; ?></h3>
 
-    <!-- Extraire ce IF -->
-    <?php if (empty($categories) || empty($recipes)) : ?>
-        <p><a href="/public/templates/profil.php?user_id=<?= $session_id; ?>">
-                <span>Retour</span>
-            </a></p>
-    <?php endif; ?>
+
+    <p class="<?= $displayLink; ?>"><a href="/public/controller/Profil.php?user_id=<?= $session_id; ?>">
+            <span>Retour</span>
+        </a></p>
+
 </section>
 
 <section <?= $classCategory; ?>>
