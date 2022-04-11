@@ -8,6 +8,7 @@ require('public/controller/Layout.php');
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<link href="/public/css/base/normalize.css" rel="stylesheet">
 	<link href="/public/css/style.css" rel="stylesheet">
 	<link rel="icon" type="image/png" href="/public/src/logo_bg/marmite_blue copie.png" />
@@ -21,6 +22,11 @@ require('public/controller/Layout.php');
 <body>
 	<header>
 		<nav>
+			<label class="switch ">
+				<input type="checkbox" id="activateur_fonction">
+				<span class="slider round"></span>
+			</label>
+			<!-- <a class="btn">active</a> -->
 			<a title="Retour accueil du site" href="/index.php"><i class="fas fa-home"></i><span>Accueil</span></a>
 			<a class="<?= $classDisplaySession; ?>" title="Ajout d'une recette" href="/public/controller/NewRecipe.php">
 				<i class="fas fa-plus"></i><span>Recette</span>
@@ -43,3 +49,4 @@ require('public/controller/Layout.php');
 	</header>
 	<main>
 		<?php include($template); ?>
+		<?php include("layout_end.php"); ?>
