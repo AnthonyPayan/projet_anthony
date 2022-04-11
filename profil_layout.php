@@ -17,6 +17,10 @@
 <body>
     <header>
         <nav>
+            <label class="switch ">
+                <input type="checkbox" id="activateur_fonction">
+                <span class="slider round"></span>
+            </label>
             <a href="/index.php"><i class="fas fa-home"></i><span>Accueil</span></a>
             <a href="/public/controller/NewRecipe.php"><i class="fas fa-plus"></i><span>Recette</span></a>
             <a href="/public/controller/ShowCategories.php">
@@ -39,4 +43,6 @@
         </nav>
     </header>
     <main>
-        <?php include($template);
+        <?php
+        include($template);
+        include("layout_end.php"); ?>

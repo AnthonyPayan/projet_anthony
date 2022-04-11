@@ -30,6 +30,7 @@ function changeToLight() {
 	document.styleSheets[1]['cssRules'][35]['style']['border'] = "1px cornflowerblue solid"; /*.btn*/
 	document.styleSheets[1]['cssRules'][36]['style']['border'] = "1px royalblue solid"; /*.btn:hover*/
 	document.styleSheets[1]['cssRules'][38]['style']['color'] = "cornflowerblue"; /*.form-section*/
+	document.styleSheets[1]['cssRules'][40]['style']['color'] = "cornflowerblue"; /*label*/
 	document.styleSheets[1]['cssRules'][42]['style']['border'] = "1px cornflowerblue solid"; /*select:hover*/
 	document.styleSheets[1]['cssRules'][44]['style']['border'] = "1px cornflowerblue solid"; /*input:focus*/
 	document.styleSheets[1]['cssRules'][45]['style']['border'] = "1px cornflowerblue solid"; /*input:hover*/
@@ -48,6 +49,11 @@ function changeToLight() {
 	document.styleSheets[1]['cssRules'][93]['style']['color'] = "cornflowerblue"; /*.profil-section*/
 	document.styleSheets[1]['cssRules'][107]['style']['color'] = "cornflowerblue"; /*.scroll-table*/
 	document.styleSheets[1]['cssRules'][109]['style']['color'] = "royaleblue"; /*.scroll-table i:hover*/
+	document.styleSheets[1]['cssRules'][115]['style']['background-color'] = "cornflowerblue"; /*.slider*/
+	document.styleSheets[1]['cssRules'][116]['style']['left'] = "13px"; /*.slider::before*/
+	document.styleSheets[1]['cssRules'][116]['style']['background-color'] = "white"; /*.slider::before*/
+	document.styleSheets[1]['cssRules'][117]['style']['background-color'] = "cornflowerblue"; /*.slider::before*/
+
 }
 
 function changeToDark() {
@@ -61,6 +67,7 @@ function changeToDark() {
 	document.styleSheets[1]['cssRules'][35]['style']['border'] = "1px orangered solid"; /*.btn*/
 	document.styleSheets[1]['cssRules'][36]['style']['border'] = "1px orangered solid"; /*.btn:hover*/
 	document.styleSheets[1]['cssRules'][38]['style']['color'] = "orange"; /*.form-section*/
+	document.styleSheets[1]['cssRules'][40]['style']['color'] = "#FF803E"; /*label*/
 	document.styleSheets[1]['cssRules'][42]['style']['border'] = "1px orange solid"; /*select:hover*/
 	document.styleSheets[1]['cssRules'][44]['style']['border'] = "1px orangered solid"; /*input:focus*/
 	document.styleSheets[1]['cssRules'][45]['style']['border'] = "1px orange solid"; /*input:hover*/
@@ -79,12 +86,17 @@ function changeToDark() {
 	document.styleSheets[1]['cssRules'][93]['style']['color'] = "orangered"; /*.profil-section span*/
 	document.styleSheets[1]['cssRules'][107]['style']['color'] = "orange"; /*.scroll-table*/
 	document.styleSheets[1]['cssRules'][109]['style']['color'] = "orangered"; /*.scroll-table i:hover*/
+	document.styleSheets[1]['cssRules'][115]['style']['background-color'] = "orange"; /*.slider*/
+	document.styleSheets[1]['cssRules'][116]['style']['left'] = "4px"; /*.slider::before*/
+	document.styleSheets[1]['cssRules'][116]['style']['background-color'] = "#1c1c1c"; /*.slider::before*/
+	document.styleSheets[1]['cssRules'][117]['style']['background-color'] = "orange"; /*.slider::before*/
+
 }
 
 document.addEventListener('DOMContentLoaded', function () { // Quand l'arbre HTML est entièrement chargé par le navigateur
 	document.querySelector("#activateur_fonction").addEventListener("click", changeTheme);
 });
 
-//Info sur feuille de style
-// let style = document.styleSheets[1]['cssRules'];
-// console.log(style);
+// Info sur feuille de style
+let style = document.styleSheets[1]['cssRules'];
+console.log(style);
