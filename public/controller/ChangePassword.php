@@ -12,7 +12,7 @@ if (!empty($_GET['user_id']) && $_GET['user_id'] == $_SESSION['id']) {
         $errors = [];
 
         if (empty($_POST['new_password']) || $_POST['new_password'] != $_POST['password_confirm']) {
-            $errors['password'] = 'Les mot de passe ne correspondent paaaaaaaaaaas.';
+            $errors['password'] = 'Les mot de passe ne correspondent pas.';
         }
 
         if (empty($_POST['old_password']) || !password_verify($_POST['old_password'], $user['password'])) {
@@ -32,14 +32,14 @@ if (!empty($_GET['user_id']) && $_GET['user_id'] == $_SESSION['id']) {
     }
 
     if (!empty($errors)) {
-        echo '<div class="alert alert-danger">
-			<p>Vous n\'avez pas rempli le formulaire correctement.</p>
-			<ul>';
         foreach ($errors as $error) {
-            echo '<li>' . $error . '</li>';
+            $errorMessage = $error;
+            $errorLink = "ChangePassword.php";
+            $errorLinkMessage = "Réessayer";
         }
-        echo '</ul></div>';
     }
 } else {
     header("location: error.php?error=2");
 };
+$template = "../templates/error.php";
+include("../../layout.php");
