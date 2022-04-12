@@ -16,8 +16,7 @@ a:link {
 }
 
 a {
-	color: orange;
-	/* color: cornflowerblue; */
+	color: cornflowerblue;
 }
 
 h1,
@@ -26,8 +25,7 @@ h3,
 h4,
 h5,
 h6 {
-	color: orange;
-	/* color: cornflowerblue; */
+	color: cornflowerblue;
 }
 
 body {
@@ -39,8 +37,7 @@ body {
 
 @media (max-width:688px) {
 	body {
-		background-color: black;
-		/* background-color: white; */
+		background-color: white;
 	}
 }
 
@@ -53,8 +50,7 @@ body {
 }
 
 .star_note {
-	color: orange;
-	/* color: cornflowerblue; */
+	color: cornflowerblue;
 	font-size: 0.8rem;
 }
 
@@ -114,11 +110,11 @@ body {
 	width: 80%;
 	margin: 0 auto 5% auto;
 	font-size: 1.3rem;
-	color: orange;
-	/* color: white; */
+
+	color: white;
 	text-align: center;
-	background-color: #1c1c1c;
-	/* background-color: #81a7ea; */
+
+	background-color: #81a7ea;
 	font-size: 1rem;
 }
 
@@ -239,22 +235,19 @@ body {
 /*====================================[ GLOBAL BUTTONS ]======================*/
 
 .btn {
-	background-color: orange;
-	/* background-color: cornflowerblue; */
+	background-color: cornflowerblue;
 	border-radius: 5px;
 	color: white;
 	padding: 10px;
 	font-size: 1rem;
 	font-weight: bold;
-	border: 1px orangered solid;
-	/* border: 1px cornflowerblue solid; */
+	border: 1px cornflowerblue solid;
 	margin: 10px;
 	cursor: pointer;
 }
 
 .btn:hover {
-	border: 1px orangered solid;
-	/* border: 1px royalblue solid; */
+	border: 1px royalblue solid;
 	-webkit-box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.18);
 	box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.18);
 	-ms-transform: scale(1.05);
@@ -286,6 +279,7 @@ form {
 .form-section:last-child {
 	text-align: center;
 	border: none;
+	padding-bottom: 100px;
 }
 
 label {
@@ -316,21 +310,18 @@ input {
 }
 
 input:focus {
-	border: 1px orangered solid;
-	/* border: 1px cornflowerblue solid; */
+	border: 1px cornflowerblue solid;
 }
 
 input:hover {
-	border: 1px orange solid;
-	/* border: 1px cornflowerblue solid; */
+	border: 1px cornflowerblue solid;
 }
 
 .form-label {
 	cursor: pointer;
 	color: white;
 	font-weight: bold;
-	background-color: orangered;
-	/* background-color: cornflowerblue; */
+	background-color: cornflowerblue;
 	padding: 10px;
 	display: inline-block;
 	border: 1px royalblue solid;
@@ -341,7 +332,11 @@ input:hover {
 	margin-right: 5px;
 }
 
-@media (max-width:373px) {
+@media (max-width:376px) {
+	form {
+		padding-top: 0px;
+	}
+
 	.form-label {
 		text-align: center;
 	}
@@ -398,23 +393,20 @@ nav {
 	width: 100%;
 	position: fixed;
 	z-index: 10;
-	background-color: #1c1c1c;
-	/* background-color: white; */
+	background-color: white;
 	-webkit-box-shadow: 0 10px 10px -4px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 10px 10px -4px rgba(0, 0, 0, 0.2);
 	overflow: hidden;
 }
 
 nav a {
-	color: orange;
-	/* color: cornflowerblue; */
+	color: cornflowerblue;
 	padding: 15px;
 	margin: 1px;
 }
 
 nav a:hover {
-	color: orangered;
-	/* color: #026ef5; */
+	color: #026ef5;
 	transition-property: all;
 	transition-duration: .5s;
 }
@@ -439,8 +431,7 @@ nav>a>i {
 /*======================[ GLOBAL MAIN ]=======================================*/
 
 main {
-	background-color: #1c1c1c;
-	/* background-color: white; */
+	background-color: white;
 	width: 70%;
 	margin: auto;
 	padding-bottom: 30%;
@@ -625,7 +616,7 @@ article img {
 }
 
 .show-recipe-ranked {
-	color: orange;
+	color: cornflowerblue;
 }
 
 @media (max-width:408px) {
@@ -674,13 +665,11 @@ article img {
 	width: 80%;
 	margin: 0 auto 5% auto;
 	font-size: 1.3rem;
-	color: orangered;
-	/* color: cornflowerblue; */
+	color: cornflowerblue;
 }
 
 .profil-section span {
-	color: orangered;
-	/* color: cornflowerblue; */
+	color: cornflowerblue;
 }
 
 .profil-section p {
@@ -831,7 +820,7 @@ article img {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	/* background-color: orange; */
+	background-color: cornflowerblue;
 	-webkit-transition: .4s;
 	transition: .4s;
 }

@@ -1,7 +1,3 @@
-<?php
-include('../../layout.php');
-?>
-
 <form method="POST" action="../controller/Login.php">
 
 	<section class="form-section">

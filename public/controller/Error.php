@@ -12,7 +12,7 @@ if (empty($_GET)) {
     $errorMessage = "Déssolé pas d'id reçu";
 } elseif ($_GET['error'] == 3) {
     $errorMessage = "Déssolé vous n'êtes pas connecté";
-    $errorLink = "Login.php";
+    $errorLink = "PreLogin.php";
     $errorLinkMessage = "Connexion";
 } elseif ($_GET['error'] == 4) {
     $errorMessage = "Désolé ce profil ne vous est pas accessible";
@@ -24,15 +24,15 @@ if (empty($_GET)) {
     $errorMessage = "Cet utilisateur n'existe pas";
 } elseif ($_GET['error'] == 7) { //erreur login.php
     $errorMessage = "Mot de passe invalide";
-    $errorLink = "login.php";
+    $errorLink = "PreLogin.php";
     $errorLinkMessage = "Réessayer";
 } elseif ($_GET['error'] == 8) { //erreur login.php
     $errorMessage = "Ce pseudonyme n'éxiste pas";
-    $errorLink = "login.php";
+    $errorLink = "PreLogin.php";
     $errorLinkMessage = "Réessayer";
 } elseif ($_GET['error'] == 9) { //erreur login.php
     $errorMessage = "Tout les champs n'ont pas été remplis";
-    $errorLink = "login.php";
+    $errorLink = "PreLogin.php";
     $errorLinkMessage = "Réessayer";
 }
 $template = "../templates/error.php";

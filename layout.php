@@ -41,7 +41,7 @@ require('public/controller/Layout.php');
 				<i class="fas fa-sign-out-alt"></i>
 				<span>Déconnexion</span>
 			</a>
-			<a class="<?= $classDisplaySessionEmpty; ?>" href="/public/templates/login.php">
+			<a class="<?= $classDisplaySessionEmpty; ?>" href="/public/controller/PreLogin.php">
 				<i class="fas fa-sign-out-alt"></i>
 				<span>Connexion</span>
 			</a>

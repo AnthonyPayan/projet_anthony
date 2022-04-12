@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3d238a1d-f6f1-4ba5-b8bd-86705c71be9c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/controller/PreUpdateRecipeCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/controller/PreUpdateRecipeCategory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/add_recipe.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/add_recipe.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/theme.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +13,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -27,8 +34,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/css" />
+    <property name="list.type.of.created.stylesheet" value="textmate" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/css" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -43,10 +60,17 @@
       <workItem from="1649100696812" duration="364000" />
       <workItem from="1649172716908" duration="257000" />
       <workItem from="1649232651395" duration="980000" />
+      <workItem from="1649715242031" duration="468000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="467" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1649715302847">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="467" y="256" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1649715302847" />
   </component>
 </project>
