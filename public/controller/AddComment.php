@@ -3,13 +3,18 @@ require('../../libraries/services/functions.php');
 
 
 if (isset($_POST)) {
-	$ranked = intval($_POST['ranked']);
 	$comment = htmlentities($_POST['comment']);
+	$ranked = intval($_POST['ranked']);
 	$user_id = htmlentities($_POST['user']);
 	$recipe_id = intval($_POST['recipe_id']);
 
 	$sql = "INSERT INTO comments (comment, ranked, user_id, recipe_id)
 			VALUES (?, ?, ?, ?)";
+	$pdo->bindValue(1, PDO::PARAM_STR);
+	$pdo->bindValue(2, PDO::PARAM_STR);
+	$pdo->bindValue(3, PDO::PARAM_STR);
+	$pdo->bindValue(4, PDO::PARAM_STR);
+
 	$query = $pdo->prepare($sql);
 	$query->execute([$comment, $ranked, $user_id, $recipe_id]);
 

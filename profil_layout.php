@@ -21,24 +21,30 @@
                 <input type="checkbox" id="activateur_fonction">
                 <span class="slider round"></span>
             </label>
-            <a href="/index.php"><i class="fas fa-home"></i><span>Accueil</span></a>
-            <a href="/public/controller/NewRecipe.php"><i class="fas fa-plus"></i><span>Recette</span></a>
+            <a href="/index.php"><i class="fas fa-home"></i>
+                <span class="navspan">Accueil</span>
+            </a>
+            <a href="/public/controller/NewRecipe.php">
+                <i class="fas fa-plus"></i>
+                <span class="navspan">Recette</span>
+            </a>
             <a href="/public/controller/ShowCategories.php">
-                <i class="fas fa-book"></i><span>Recettes</span>
+                <i class="fas fa-book"></i>
+                <span class="navspan">Recettes</span>
             </a>
             <a href="/public/controller/Profil.php?user_id=<?= $_SESSION['id']; ?>">
-                <i class="fas fa-user"></i><span>Mon profil</span>
+                <i class="fas fa-user"></i><span class="navspan">Mon profil</span>
             </a>
 
             <?php if ($_SESSION['role'] == ADMIN) : ?>
                 <a href="/private/index.php?id=<?= $_SESSION['id']; ?>">
-                    <i class="fas fa-cogs"></i><span>Administration</span>
+                    <i class="fas fa-cogs"></i><span navspan>Administration</span>
                 </a>
             <?php endif; ?>
 
             <a href="/public/controller/Logout.php">
                 <i class="fas fa-sign-out-alt"></i>
-                <span>Déconnexion</span>
+                <span class="navspan">Déconnexion</span>
             </a>
         </nav>
     </header>

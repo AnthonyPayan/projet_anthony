@@ -27,23 +27,27 @@ require('public/controller/Layout.php');
 				<span class="slider round"></span>
 			</label>
 			<!-- <a class="btn">active</a> -->
-			<a title="Retour accueil du site" href="/index.php"><i class="fas fa-home"></i><span>Accueil</span></a>
+			<a title="Retour accueil du site" href="/index.php">
+				<i class="fas fa-home"></i>
+				<span class="navspan">Accueil</span>
+			</a>
 			<a class="<?= $classDisplaySession; ?>" title="Ajout d'une recette" href="/public/controller/NewRecipe.php">
-				<i class="fas fa-plus"></i><span>Recette</span>
+				<i class="fas fa-plus"></i>
+				<span class="navspan">Recette</span>
 			</a>
 			<a title="Liste des recettes" href="/public/controller/ShowCategories.php">
-				<i class="fas fa-book"></i><span>Recettes</span>
+				<i class="fas fa-book"></i><span class="navspan">Recettes</span>
 			</a>
 			<a class="<?= $classDisplaySession; ?>" href="/public/controller/Profil.php?user_id=<?= $session_id; ?>">
-				<i class="fas fa-user"></i><span>Mon profil</span><?= $notifWait; ?>
+				<i class="fas fa-user"></i><span class="navspan">Mon profil</span><?= $notifWait; ?>
 			</a>
 			<a class="<?= $classDisplaySession; ?>" href="/public/controller/Logout.php">
 				<i class="fas fa-sign-out-alt"></i>
-				<span>Déconnexion</span>
+				<span class="navspan">Déconnexion</span>
 			</a>
 			<a class="<?= $classDisplaySessionEmpty; ?>" href="/public/controller/PreLogin.php">
 				<i class="fas fa-sign-out-alt"></i>
-				<span>Connexion</span>
+				<span class="navspan">Connexion</span>
 			</a>
 		</nav>
 	</header>
