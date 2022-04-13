@@ -9,14 +9,16 @@ if (!empty($_GET['user_id']) && $_GET['user_id'] == $_SESSION['id']) {
 
     if (!empty($_POST)) {
 
-        $errors = [];
-
-        if (empty($_POST['new_password']) || $_POST['new_password'] != $_POST['password_confirm']) {
-            $errors['password'] = 'Les mot de passe ne correspondent pas.';
+        if (empty($_POST['new_password']) || empty($_POST['password_confirm']) || empty($_POST['old_password'])) {
+            header("location: Error.php?error=9");
         }
 
-        if (empty($_POST['old_password']) || !password_verify($_POST['old_password'], $user['password'])) {
-            $errors['password'] = 'L\'ancien mot de passe n\'est pas valide.';
+        if ($_POST['new_password'] != $_POST['password_confirm']) {
+            header("location: Error.php?error=10");
+        }
+
+        if (!password_verify($_POST['old_password'], $user['password'])) {
+            header("location: Error.php?error=11");
         }
 
         if (empty($errors)) {
@@ -30,16 +32,6 @@ if (!empty($_GET['user_id']) && $_GET['user_id'] == $_SESSION['id']) {
             exit();
         }
     }
-
-    if (!empty($errors)) {
-        foreach ($errors as $error) {
-            $errorMessage = $error;
-            $errorLink = "ChangePassword.php";
-            $errorLinkMessage = "Réessayer";
-        }
-    }
 } else {
-    header("location: error.php?error=2");
+    header("location: Error.php?error=2");
 };
-$template = "../templates/error.php";
-include("../../layout.php");

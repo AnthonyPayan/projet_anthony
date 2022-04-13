@@ -12,7 +12,7 @@
 
 	<section class="form-section">
 		<button type="submit" class="btn">Connexion</button>
-		<p class="p-detail">vous n'avez pas de compte ? <a title="S'inscrire" href="registration.php">inscrivez-vous</a></p>
+		<p class="p-detail">vous n'avez pas de compte ? <a title="S'inscrire" href="PreRegistration.php">inscrivez-vous</a></p>
 	</section>
 
 </form>

@@ -1,38 +1,57 @@
 <?php require('../../libraries/services/functions.php');
 
-
-
+$error = [];
 if (!empty($_POST)) {
 
-   $errors = [];
-
-   if (empty($_POST['nickname']) || !preg_match('/^[a-zA-Z0-9_]+$/', $_POST['nickname'])) {
-      $errors['nickname'] = 'Le pseudo ne peut contenir que les caractères suivant : a-z A-Z 0-9 et _';
-   } else {
-      $sql = 'SELECT id FROM users WHERE nickname = ?';
-      $query = $pdo->prepare($sql);
-
-      $query->execute([htmlentities($_POST['nickname'])]);
-      $user = $query->fetch();
-      if ($user) {
-         $errors['nickname'] = 'Ce pseudo est déjà pris.';
-      }
+   if (empty($_POST['nickname'])) { //Champ pseudonyme 
+      $error[] = 12;
+      header("location: Error.php?error=" . $error[0] . "");
+      exit();
    }
 
-   if (empty($_POST['password']) || $_POST['password'] != $_POST['password_confirm']) {
-      $errors['password'] = 'Les mot de passe ne correspondent pas.';
+   if (!preg_match('/^[a-zA-Z0-9_]+$/', $_POST['nickname'])) {
+      $error[] = 13;
+      header("location: Error.php?error=" . $error[0] . ""); //Mauvais caractère(s)
+      exit();
    }
 
-   if (empty($errors)) {
+   $sql = 'SELECT id FROM users WHERE nickname = ?';
+   $query = $pdo->prepare($sql);
 
+   $query->execute([htmlentities($_POST['nickname'])]);
+   $user = $query->fetch();
+
+   if ($user) { //Pseudo déjà utilisé
+      $error[] = 14;
+      header("location : Error.php?error=" . $error[0] . "");
+      exit();
+   }
+
+   if (empty($_POST['password'])) { //Champ MDP recquis 
+      $error[] = 15;
+      header("location: Error.php?error=" . $error[0] . "");
+      exit();
+   }
+   if (empty($_POST['password_confirm'])) {
+      $error[] = 18;
+      header("location: Error.php?error=" . $error[0] . ""); //Le MDP de confirmation est vide
+      exit();
+   }
+   if ($_POST['password'] != $_POST['password_confirm']) {
+      $error[] = 16;
+      header("location: Error.php?error=" . $error[0] . ""); //Le MDP de confirmation ne correspond pas
+      exit();
+   }
+
+   if (empty($error)) {
       $avatar_num = rand(1, 26);
       $password = $_POST['password'];
       $hashed_password = password_hash($password, PASSWORD_BCRYPT);
       $sql = 'INSERT INTO users(
-			nickname,
-			password,
-			avatar
-		) VALUES(?, ?, ?)';
+            nickname,
+            password,
+            avatar
+         ) VALUES(?, ?, ?)';
       $query = $pdo->prepare($sql);
       $query->execute([
          $_POST['nickname'],
@@ -47,27 +66,9 @@ if (!empty($_POST)) {
       $_SESSION['role'] = 3;
       $_SESSION['avatar'] = $avatar_num;
       header("location: ../../index.php");
+      exit();
+   } else {
+      $error[] = 17;
+      header("location: Error.php?error=" . $error[0] . "");
    }
 }
-
-if (!empty($errors)) : ?>
-
-   <section class="danger-section">
-
-      <h4>Le formulaire n'a pas été rempli correctement</h4>
-      <ul>
-         <?php foreach ($errors as $error) : ?>
-            <li><?= $error; ?></li>
-
-         <?php endforeach; ?>
-      </ul>
-
-      <a class="btn" href="/public/templates/registration.php">Nouvel tentative</a>
-      <a class="btn" href="/index.php">Retour accueil</a>
-
-   </section>
-
-
-
-
-<?php endif; ?>

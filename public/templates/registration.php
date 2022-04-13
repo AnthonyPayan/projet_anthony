@@ -1,7 +1,3 @@
-<?php
-include('../../layout.php');
-?>
-
 <section class="title">
     <h1 class="text-success">Inscription</h1>
 </section>
@@ -21,6 +17,6 @@ include('../../layout.php');
     </section>
     <section class="form-section">
         <button type="submit" class="btn">Envoyé</button>
-        <p class="p-detail">Vous avez déjà un compte ? <a href="Login.php">connectez-vous</a></p>
+        <p class="p-detail">Vous avez déjà un compte ? <a href="PreLogin.php">connectez-vous</a></p>
     </section>
 </form>
