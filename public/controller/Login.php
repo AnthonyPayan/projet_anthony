@@ -21,5 +21,5 @@ if (!empty($_POST['nickname'])) {
         header('location: /public/controller/Error.php?error=8');
     }
 } else {
-    header('location: /public/controller/Error.php?error=9');
+    header('location: /public/controller/Error.php?error=19');
 }

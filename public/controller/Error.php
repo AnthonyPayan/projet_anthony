@@ -74,9 +74,11 @@ elseif ($_GET['error'] == 12) { //Champ pseudonyme non reçu
     $errorMessage = "Champ mot de passe de confirmation recquis";
     $errorLink = "PreRegistration.php";
     $errorLinkMessage = "Réessayer";
+} elseif ($_GET['error'] == 19) { //Champ non remplis
+    $errorMessage = "Tout les champs n'ont pas été remplis";
+    $errorLink = "Prelogin.php";
+    $errorLinkMessage = "Réessayer";
 }
-
-
 
 $errors['password'] = 'Les mot de passe ne correspondent pas.';
 
