@@ -28,5 +28,9 @@ if (!empty($_GET['recipe_id'])) {
             exit();
         }
         header("location: ../controller/ShowMyRecipes.php?category_id=$category_id");
+    } else {
+        header("location: Error.php?error=21");
     }
+} else {
+    header("location: Error.php?error=1");
 }

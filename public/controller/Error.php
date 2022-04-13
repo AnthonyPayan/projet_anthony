@@ -88,6 +88,8 @@ elseif ($_GET['error'] == 12) { //Champ pseudonyme non reçu
     $errorLinkMessage = "Réessayer";
 } elseif ($_GET['error'] == 20) { //une erreur est survenu
     $errorMessage = "Désolé une erreur est survenu";
+} elseif ($_GET['error'] == 21) { //une erreur est survenu
+    $errorMessage = "Vous souhaitez supprimer une recette qui ne vous appartient pas";
 }
 
 $template = "../templates/error.php";
