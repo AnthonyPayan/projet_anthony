@@ -38,7 +38,7 @@ function adminCheck()
     if (empty($_SESSION)) {
         header("location: ../../public/templates/error.php?error=3");
     } elseif ($_SESSION['role'] != ADMIN) {
-        header("location: ../../public/templates/error.php?error=6");
+        header("location: ../../public/templates/error.php?error=22");
     }
 }
 

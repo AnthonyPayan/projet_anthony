@@ -18,9 +18,7 @@ if (empty($_GET)) {
     $errorMessage = "Désolé ce profil ne vous est pas accessible";
 } elseif ($_GET['error'] == 5) {
     $errorMessage = "Désolé cette recette ne vous est pas accessible";
-} elseif ($_GET['error'] == 6) {
-    $errorMessage = "Désolé vous n'avez pas les droits pour accéder à cette page";
-} elseif ($_GET['error'] == 6) {
+}  elseif ($_GET['error'] == 6) {
     $errorMessage = "Cet utilisateur n'existe pas";
 }
 
@@ -90,6 +88,8 @@ elseif ($_GET['error'] == 12) { //Champ pseudonyme non reçu
     $errorMessage = "Désolé une erreur est survenu";
 } elseif ($_GET['error'] == 21) { //une erreur est survenu
     $errorMessage = "Vous souhaitez supprimer une recette qui ne vous appartient pas";
+}elseif ($_GET['error'] == 22) {
+    $errorMessage = "Désolé vous n'avez pas les droits pour accéder à cette page";
 }
 
 $template = "../templates/error.php";

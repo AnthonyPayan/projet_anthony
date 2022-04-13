@@ -14,7 +14,6 @@ if (!empty($_GET['recipe_id'])) {
         $category_id = $_GET['category_id'];
         $user_id = $_SESSION['id'];
 
-
         $sql = "SELECT id FROM recipes WHERE user_id = $user_id AND category_id = $category_id";
         $query = $pdo->prepare($sql);
         $query->execute();
