@@ -22,7 +22,11 @@ if (empty($_GET)) {
     $errorMessage = "Désolé vous n'avez pas les droits pour accéder à cette page";
 } elseif ($_GET['error'] == 6) {
     $errorMessage = "Cet utilisateur n'existe pas";
-} elseif ($_GET['error'] == 7) { //MDP invalide
+}
+
+//Login
+
+elseif ($_GET['error'] == 7) { //MDP invalide
     $errorMessage = "Mot de passe invalide";
     $errorLink = "PreLogin.php";
     $errorLinkMessage = "Réessayer";
@@ -30,7 +34,11 @@ if (empty($_GET)) {
     $errorMessage = "Ce pseudonyme n'éxiste pas";
     $errorLink = "PreLogin.php";
     $errorLinkMessage = "Réessayer";
-} elseif ($_GET['error'] == 9) { //Tout les chaps ne sont pas remplis
+}
+
+//ChangePassword
+
+elseif ($_GET['error'] == 9) { //Tout les chaps ne sont pas remplis
     $errorMessage = "Tout les champs n'ont pas été remplis";
     $errorLink = "PreChangePassword.php";
     $errorLinkMessage = "Réessayer";
@@ -42,9 +50,13 @@ if (empty($_GET)) {
     $errorMessage = "L\'ancien mot de passe n\'est pas valide.";
     $errorLink = "PreChangePassword.php";
     $errorLinkMessage = "Réessayer";
+} elseif ($_GET['error'] == 19) { //Champ non remplis
+    $errorMessage = "Tout les champs n'ont pas été remplis";
+    $errorLink = "Prelogin.php";
+    $errorLinkMessage = "Réessayer";
 }
 
-//Registration ERROR
+//Registration
 
 elseif ($_GET['error'] == 12) { //Champ pseudonyme non reçu
     $errorMessage = "Champ pseudonyme recquis";
@@ -74,13 +86,9 @@ elseif ($_GET['error'] == 12) { //Champ pseudonyme non reçu
     $errorMessage = "Champ mot de passe de confirmation recquis";
     $errorLink = "PreRegistration.php";
     $errorLinkMessage = "Réessayer";
-} elseif ($_GET['error'] == 19) { //Champ non remplis
-    $errorMessage = "Tout les champs n'ont pas été remplis";
-    $errorLink = "Prelogin.php";
-    $errorLinkMessage = "Réessayer";
+} elseif ($_GET['error'] == 20) { //une erreur est survenu
+    $errorMessage = "Désolé une erreur est survenu";
 }
-
-$errors['password'] = 'Les mot de passe ne correspondent pas.';
 
 $template = "../templates/error.php";
 include("../../layout.php");

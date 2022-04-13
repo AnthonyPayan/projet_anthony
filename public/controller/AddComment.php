@@ -16,5 +16,5 @@ if (isset($_POST)) {
 	header("location: /public/controller/ShowComments.php?recipe_id=$recipe_id");
 	exit();
 } else {
-	echo 'Pas de requête reçu dans AddComment.php';
+	header("location: Error.php?error=20");
 }
