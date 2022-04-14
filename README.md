@@ -2,9 +2,7 @@
 
 Partage de recette de cuisine.
 
-<video controls>
-  <source src="projet_anthony/public/src/video_projet.mp4" type="video/mp4">
-</video>
+![démo_projet](https://user-images.githubusercontent.com/55577599/163473096-80a67e39-105e-4d66-b7f3-c9089066a9ab.gif)
 
 
 ## Pour commencer
