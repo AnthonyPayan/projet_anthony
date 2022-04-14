@@ -11,7 +11,7 @@ Partage de recette de cuisine.
 
 - PHP >= 7.4.26
 
-### Installation <img src="https://user-images.githubusercontent.com/55577599/163479141-60984bbf-3e84-460e-b951-5643a4ad8368.png" width=25px/>
+### Installation
 
 
 - Télécharger le depôt Git. 
@@ -82,5 +82,5 @@ User2:
 
 ## Contributeur
 
-<img src="https://user-images.githubusercontent.com/55577599/163478255-2c6bb2a4-2ba8-4d52-97ca-d6705ff84ea4.png" width=25px> **Antoine Mineau** _alias_ [@AntoineMineau](https://github.com/AntoineMineau) 
+* **Antoine Mineau** _alias_ [@AntoineMineau](https://github.com/AntoineMineau) 
 
