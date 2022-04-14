@@ -69,4 +69,3 @@ if (count($recipes) > 6) {
 
 $template = "public/templates/home.php";
 include('layout.php');
-// include('layout_end.php');
