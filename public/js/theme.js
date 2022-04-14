@@ -42,6 +42,5 @@ document.addEventListener('DOMContentLoaded', function () { // Quand l'arbre HTM
 });
 
 // Info sur feuille de style
-
 // let style = document.styleSheets[1]['cssRules'];
 // console.log(style);
