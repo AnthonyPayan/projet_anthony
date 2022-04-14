@@ -11,7 +11,7 @@ require('public/controller/Layout.php');
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<link href="/public/css/base/normalize.css" rel="stylesheet">
 	<link href="/public/css/style.css" rel="stylesheet">
-	<link rel="icon" type="image/png" href="/public/src/logo_bg/marmite_blue copie.png" />
+	<link rel="icon" type="image/png" href="/public/src/logo_bg/favicon.ico" />
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
