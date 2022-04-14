@@ -21,8 +21,6 @@ if (isset($_POST)) {
 
 	$query->execute([$comment, $ranked, $user_id, $recipe_id]);
 
-	// [$comment, $ranked, $user_id, $recipe_id] ce trouve dans le execute
-
 	header("location: /public/controller/ShowComments.php?recipe_id=$recipe_id");
 	exit();
 } else {

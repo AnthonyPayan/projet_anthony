@@ -26,7 +26,7 @@ require('public/controller/Layout.php');
 				<input type="checkbox" id="activateur_fonction">
 				<span class="slider round"></span>
 			</label>
-			<!-- <a class="btn">active</a> -->
+
 			<a title="Retour accueil du site" href="/index.php">
 				<i class="fas fa-home"></i>
 				<span class="navspan">Accueil</span>

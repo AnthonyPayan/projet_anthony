@@ -9,8 +9,6 @@ $classDisplaySessionEmpty = NULL;
 if ($_SESSION['id'] != NULL) {
 
     $session_id = $_SESSION['id'];
-
-    // $session_name = selectOneByFetch($pdo, 'nickname', 'users', 'id', $session_id);
     $attente = ATTENTE;
     $recipe_info = countWaWfetch($pdo, 'id', 'recipes_wait', 'recipes', 'user_id', 'category_id', $session_id, $attente);
 

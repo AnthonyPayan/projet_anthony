@@ -5,7 +5,6 @@ session_start();
 if (isset($_SESSION['id'])) {
     $session_id = $_SESSION['id'];
 
-
     if (isset($_GET['user_id'])) {
         $user_id = $_GET['user_id'];
     } else {
