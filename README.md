@@ -11,7 +11,7 @@ Partage de recette de cuisine.
 
 - PHP >= 7.4.26
 
-### Installation ![rules](https://user-images.githubusercontent.com/55577599/163479141-60984bbf-3e84-460e-b951-5643a4ad8368.png)
+### Installation <img src="https://user-images.githubusercontent.com/55577599/163479141-60984bbf-3e84-460e-b951-5643a4ad8368.png" width=25px/>
 
 
 - Télécharger le depôt Git. 
