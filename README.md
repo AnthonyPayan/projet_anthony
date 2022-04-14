@@ -2,6 +2,8 @@
 
 Partage de recette de cuisine.
 
+<img src="https://gyazo.com/4793a8202483585f03ec225a51b08101" alt="screenshot du projet">
+
 ## Pour commencer
 
 ### Pré-requis
