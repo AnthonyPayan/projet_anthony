@@ -81,4 +81,5 @@ User2:
 
 ## Contributeur
 
-* **Antoine Mineau** _alias_ [@AntoineMineau](https://github.com/AntoineMineau)
+* **Antoine Mineau** _alias_ [@AntoineMineau](https://github.com/AntoineMineau) ![scroll](https://user-images.githubusercontent.com/55577599/163478255-2c6bb2a4-2ba8-4d52-97ca-d6705ff84ea4.png)
+
