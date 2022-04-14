@@ -85,10 +85,16 @@ function selectByWaW($pdo, $tableToSelect, $firstWhere, $secondWhere, $firstSele
 
 function deleteById($pdo, $tableToSelect, $where, $selectTo)
 {
-    $sql = "DELETE FROM $tableToSelect WHERE $where = $selectTo";
+    $sql = "DELETE FROM $tableToSelect WHERE $where = :value";
+
     $query = $pdo->prepare($sql);
+
+    $query->bindValue("value", $selectTo);
     $query->execute();
 }
+
+
+
 function showCommentsUsers($pdo, $recipe_id)
 {
     $sql = "SELECT comment, ranked, nickname FROM comments INNER JOIN users ON comments.user_id = users.id WHERE recipe_id = ?";
@@ -111,7 +117,7 @@ function showComments($pdo)
 function allDatas($pdo, $recipe_id)
 {
     $sql = 'SELECT recipes.id, title, description, image, date_recipe, recipes.user_id, category_id, name, comment, ranked, nickname FROM recipes
-	INNER JOIN comments
+	LEFT JOIN comments
 	ON recipes.id = comments.recipe_id
 	INNER JOIN users
 	ON recipes.user_id = users.id
@@ -120,7 +126,7 @@ function allDatas($pdo, $recipe_id)
 	WHERE recipes.id = ?';
     $query = $pdo->prepare($sql);
     $query->execute([$recipe_id]);
-    return $data = $query->fetch();
+    return $query->fetch();
 }
 
 

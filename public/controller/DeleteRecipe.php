@@ -1,21 +1,22 @@
 <?php
-session_start();
 require('../../libraries/services/functions.php');
-
+session_start();
 
 if (!empty($_GET['recipe_id'])) {
 
     $check_user_id = allDatas($pdo, $_GET['recipe_id']);
 
-    //Verification : Si l'utilisateur souhaitant supprimer la recette est le même que l'utilisateur postant la recette
-    if ($check_user_id['user_id'] === $_SESSION['id']) {
+
+    //Verrification en base de données pour les GET
+    if ($check_user_id['user_id'] === $_SESSION['id'] && $check_user_id['category_id'] === $_GET['category_id']) {
 
         $recipe_id = $_GET['recipe_id'];
         $category_id = $_GET['category_id'];
         $user_id = $_SESSION['id'];
 
-        $sql = "SELECT id FROM recipes WHERE user_id = $user_id AND category_id = $category_id";
+        $sql = "SELECT id FROM recipes WHERE user_id = $user_id AND category_id = :category_id";
         $query = $pdo->prepare($sql);
+        $query->bindValue("category_id", $category_id);
         $query->execute();
         $recipe = $query->fetchAll();
 

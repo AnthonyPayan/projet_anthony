@@ -16,11 +16,11 @@ if (!empty($_POST)) {
 
 	$query = $pdo->prepare($sql);
 
-	$query->bindValue(1, $title, PDO::PARAM_STR);
-	$query->bindValue(2, $description, PDO::PARAM_STR);
-	$query->bindValue(3, $image, PDO::PARAM_STR);
-	$query->bindValue(4, $user_id, PDO::PARAM_INT);
-	$query->bindValue(5, $category_id, PDO::PARAM_STR);
+	$query->bindValue(1, $title);
+	$query->bindValue(2, $description);
+	$query->bindValue(3, $image);
+	$query->bindValue(4, $user_id);
+	$query->bindValue(5, $category_id);
 
 	$query->execute();
 
