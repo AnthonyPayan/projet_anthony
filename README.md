@@ -1,13 +1,6 @@
 # Recette
 
 Partage de recette de cuisine.
-<video controls>
-  <source src="https://gyazo.com/4793a8202483585f03ec225a51b08101" type="video/mp4">
-
-  <p>Votre navigateur ne prend pas en charge les vidéos HTML5.
-     Voici <a href="myVideo.mp4">un lien pour télécharger la vidéo</a>.</p>
-</video>
-<img src="" alt="screenshot du projet">
 
 ## Pour commencer
 
