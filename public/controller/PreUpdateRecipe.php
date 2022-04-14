@@ -10,7 +10,7 @@ if ($_GET) {
 }
 
 $categoriesArray = [];
-
+$number = 0;
 foreach ($categories as $category) {
     if ($category['id'] == $recipe['category_id']) {
         $categoriesArray[$number] = [

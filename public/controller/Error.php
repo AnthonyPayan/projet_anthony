@@ -90,6 +90,9 @@ elseif ($_GET['error'] == 12) { //Champ pseudonyme non reçu
     $errorMessage = "Vous souhaitez supprimer une recette qui ne vous appartient pas";
 } elseif ($_GET['error'] == 22) {
     $errorMessage = "Désolé vous n'avez pas les droits pour accéder à cette page";
+} elseif ($_GET['error'] == 23) {
+    $errorMessage = "Une erreur est survenu";
+    $errorLink = "ShowMycategories.php";
 }
 
 $template = "../templates/error.php";

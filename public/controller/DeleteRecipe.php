@@ -6,7 +6,6 @@ if (!empty($_GET['recipe_id'])) {
 
     $check_user_id = allDatas($pdo, $_GET['recipe_id']);
 
-
     //Verrification en base de données pour les GET
     if ($check_user_id['user_id'] === $_SESSION['id'] && $check_user_id['category_id'] === $_GET['category_id']) {
 
