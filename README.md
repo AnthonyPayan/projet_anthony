@@ -2,6 +2,11 @@
 
 Partage de recette de cuisine.
 
+<video controls>
+  <source src="projet_anthony/public/src/video_projet.mp4" type="video/mp4">
+</video>
+
+
 ## Pour commencer
 
 ### Pré-requis
