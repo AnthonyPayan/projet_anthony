@@ -21,7 +21,6 @@ function changeTheme() { //Detection du theme dans le localStorage.
 
 function changeToLight() {
 	document.styleSheets[1]['cssRules'][5]['style']['background-color'] = "#efefef"; /*body*/
-
 	document.styleSheets[1]['cssRules'][56]['style']['background-color'] = "white"; /*nav*/
 	document.styleSheets[1]['cssRules'][62]['style']['background-color'] = "white"; /*main*/
 	document.styleSheets[1]['cssRules'][116]['style']['left'] = "13px"; /*.slider::before*/
@@ -30,7 +29,6 @@ function changeToLight() {
 
 function changeToDark() {
 	document.styleSheets[1]['cssRules'][5]['style']['background-color'] = "black"; /*body*/
-
 	document.styleSheets[1]['cssRules'][56]['style']['background-color'] = "#1c1c1c"; /*nav*/
 	document.styleSheets[1]['cssRules'][62]['style']['background-color'] = "#1c1c1c"; /*main*/
 	document.styleSheets[1]['cssRules'][116]['style']['left'] = "4px"; /*.slider::before*/
