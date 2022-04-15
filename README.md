@@ -1,6 +1,6 @@
 # Recette
 
-Partage de recette de cuisine.
+Partage de recette de cuisine, admin, notification
 
 <img src="https://user-images.githubusercontent.com/55577599/163473096-80a67e39-105e-4d66-b7f3-c9089066a9ab.gif"/>
 
@@ -75,7 +75,10 @@ User2:
   
 - **1.2**
   - Ajout d'une vérification lors de l'inscription par mail.
-  
+
+- **1.3**
+  - Résolution pagination qui ne s'affiche plus sur la dernière page.
+   
 ## Auteur
 
 * **Anthony Payan** _alias_ [@AnthonyPayan](https://github.com/AnthonyPayan)
